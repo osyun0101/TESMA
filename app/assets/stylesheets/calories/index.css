@@ -1,0 +1,34 @@
+.tesma-introduction {
+  position: relative;
+  height: 500px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tesma-introduction h1{
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0,0,0,1);
+}
+
+.yogamat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.tesma-about {
+  padding: 0 20px;
+}
+
+.tesma-about-p span{
+  font-weight: bold;
+}

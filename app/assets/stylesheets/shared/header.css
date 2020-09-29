@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+.header-content {
+  background-color: #ffdbc9;
+  padding-bottom: 10px;
+}
+
+.header-logo {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+.tesma_logo_icon {
+  height: 45px;
+  width:  225px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header-row a{
+  text-decoration: none;
+  color: black;
+}
+.select-list {
+  display: flex;
+}
+
+.select-list li{
+  margin-right: 5px;
+  line-height: 80px;
+  width: 120px;
+  padding: 0 10px;
+  background-color: #ff9966;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.session-user {
+  display: flex;
+}
+
+.session-user li{
+  margin-right: 20px;
+}
+
+.session-user a{
+  line-height: 80px;
+  font-size: 18px;
+}
