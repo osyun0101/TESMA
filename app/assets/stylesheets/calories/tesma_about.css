@@ -6,9 +6,117 @@
   height: calc(100vh - 297px);
   width: 20vw;
   text-align: center;
+  border-right: 1px solid olive;
+}
+
+.about-lists h2{
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-shadow: 0 0 2px rgba(0,0,0,0.3);
 }
 
 .about-lists-box li{
   margin-top: 20px;
   cursor: pointer;
+}
+
+.selected-list {
+  padding: 20px;
+}
+
+#tesma-concept h2{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#tesma-concept span{
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/*------体重を落とす計算式--------------*/
+
+
+.basal-inline {
+  display: inline;
+  position: relative;
+  color: #4192FF;
+  text-decoration: underline #4192FF;
+  cursor: pointer;
+}
+
+.basal-inline:hover {
+  color: rgba(65,146,255,0.6);
+  text-decoration: underline rgba(65,146,255,0.2);
+}
+
+#basal-none {
+  display: none;
+  position: absolute;
+  top: 43px;
+  left: 1px;
+  z-index: 9999;
+  font-weight: 500;
+  width: 300px;
+  background-color: #ffdbc9;
+  padding: 5px;
+  color: black;
+  font-weight: 600;
+}
+
+#basal-none:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -15px;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #ffdbc9;
+  border-left: 15px solid transparent;
+}
+
+#life-num-none {
+  display: none;
+  position: absolute;
+  top: 43px;
+  left: 1px;
+  z-index: 9999;
+  font-weight: 500;
+  width: 500px;
+  background-color: #ffdbc9;
+  padding: 5px;
+  color: black;
+  font-weight: 600;
+}
+
+#life-num-none:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -15px;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #ffdbc9;
+  border-left: 15px solid transparent;
+}
+
+/*---------------------------基礎代謝をあげるとどうなるか*/
+
+
+.basal-logo-box {
+  text-align: center;
+}
+
+.basal-logo-image {
+  height: 500px;
+  object-fit: contain;
 }

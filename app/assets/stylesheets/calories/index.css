@@ -66,6 +66,7 @@
 
 .concept-link {
   margin-top: 100px;
+  margin-bottom: 30px;
 }
 
 .concept-link p{
@@ -101,14 +102,6 @@
 
 .click-button:hover {
   color: #777777;
-}
-
-.tesma-about {
-  padding: 0 70px;
-}
-
-.tesma-about-p span{
-  font-weight: bold;
 }
 
 .red-important {

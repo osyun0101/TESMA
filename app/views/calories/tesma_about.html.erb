@@ -1,14 +1,24 @@
 <%=render "shared/header"%>
 
+<div class="header-height">
 <div class="tesma-about-content">
   <div class="about-lists">
+    <h2>TESMAについて</h2>
     <ul class="about-lists-box">
       <li>コンセプト</li>
       <li>体脂肪を落とす計算式</li>
+      <li>基礎代謝をあげるとどうなるのか</li>
     </ul>
   </div>
   <div class="selected-list">
+
+    <%= render 'shared/tesma_introduction'%>
+
+    <%= render 'shared/down_logic'%>
+
+    <%=render 'shared/basal_about'%>
   </div>
+</div>
 </div>
 
 <%= render "shared/footer"%>
