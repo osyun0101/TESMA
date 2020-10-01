@@ -20,6 +20,7 @@
 .header-row {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -30,12 +31,13 @@
 }
 .select-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .select-list li{
   margin-right: 5px;
   line-height: 80px;
-  width: 120px;
+  width: 145px;
   padding: 0 10px;
   background-color: #ff9966;
   border-radius: 5px;

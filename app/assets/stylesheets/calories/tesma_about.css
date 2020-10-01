@@ -1,0 +1,14 @@
+.tesma-about-content {
+  display: flex;
+}
+
+.about-lists {
+  height: calc(100vh - 297px);
+  width: 20vw;
+  text-align: center;
+}
+
+.about-lists-box li{
+  margin-top: 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,36 @@
+<div class="header-content">
+  <div class="header-logo">
+    <%= link_to image_tag("tesma_logo.jpeg", class: "tesma_logo_icon"),"/"%>
+  </div>
+  <div class="header-row">
+    <div class="select-block">
+      <ul class="select-list">
+        <%= link_to  "#" do%>
+        <li>カロリー計算</li>
+        <%end%>
+        <%= link_to  "#" do%>
+        <li>基礎代謝管理</li>
+        <%end%>
+        <%= link_to  "#" do%>
+        <li>目標設定</li>
+        <%end%>
+        <%= link_to  "#" do%>
+        <li>目標進捗</li>
+        <%end%>
+        <%= link_to  "#" do%>
+        <li>使い方</li>
+        <%end%>
+        <%= link_to (tesma_about_calories_path) do%>
+        <li>TESMAについて</li>
+        <%end%>
+      </ul>
+    </div>
+    <div class="user-relation">
+      <ul class="session-user">
+        <li><%=link_to "ユーザー名", "#"%></li>
+        <li><%=link_to "ログイン", "#"%></li>
+        <li><%=link_to "ログアウト", "#"%></li>
+      </ul>
+    </div>
+  </div>
+</div>

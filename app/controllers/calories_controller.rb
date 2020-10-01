@@ -3,4 +3,6 @@ class CaloriesController < ApplicationController
   end
   def new
   end
+  def tesma_about
+  end
 end
