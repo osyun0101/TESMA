@@ -3,12 +3,14 @@
 <div class="header-height">
 <div class="tesma-about-content">
   <div class="about-lists">
+    <div class="lists-fixed">
     <h2>TESMAについて</h2>
     <ul class="about-lists-box">
-      <li>コンセプト</li>
-      <li>体脂肪を落とす計算式</li>
-      <li>基礎代謝をあげるとどうなるのか</li>
+      <li id="concept-link-button">コンセプト</li>
+      <li id="math-calory">体脂肪を落とす計算式</li>
+      <li id="basal-about">基礎代謝をあげるとどうなるのか</li>
     </ul>
+    </div>
   </div>
   <div class="selected-list">
 
@@ -19,6 +21,5 @@
     <%=render 'shared/basal_about'%>
   </div>
 </div>
+ <%= render "shared/footer"%>
 </div>
-
-<%= render "shared/footer"%>

@@ -1,13 +1,21 @@
 .tesma-about-content {
   display: flex;
+  height: calc(100vh - 297px);
 }
 
 .about-lists {
-  height: calc(100vh - 297px);
-  width: 20vw;
   text-align: center;
   border-right: 1px solid olive;
+  width: 270px;
 }
+
+.lists-fixed {
+  position: fixed;
+  width: 270px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
 
 .about-lists h2{
   font-size: 25px;
@@ -21,8 +29,21 @@
   cursor: pointer;
 }
 
+#concept-link-button:hover {
+  font-weight: bold;
+}
+
+#math-calory:hover {
+  font-weight: bold;
+}
+
+#basal-about:hover {
+  font-weight: bold;
+}
+
 .selected-list {
   padding: 20px;
+  width: calc(100vw - 270px);
 }
 
 #tesma-concept h2{
@@ -35,16 +56,29 @@
 }
 
 
+/*-------コンセプト------------------*/
+#tesma-concept {
+  text-align: center;
+}
 
+.tesma-concept-p{
+  font-size: 20px;
+}
 
+.tesma-concept-p span{
+  font-size: 25px;
+}
 
-
-
-
-
+.personnel-lists li{
+  font-weight: bold;
+  font-size: 25px;
+}
 
 /*------体重を落とす計算式--------------*/
-
+#logic-content {
+  display: none;
+  text-align: center;
+}
 
 .basal-inline {
   display: inline;
@@ -112,11 +146,13 @@
 /*---------------------------基礎代謝をあげるとどうなるか*/
 
 
-.basal-logo-box {
+#basal-logo-box {
   text-align: center;
+  display: none;
 }
 
 .basal-logo-image {
   height: 500px;
   object-fit: contain;
 }
+

@@ -8,6 +8,8 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("../hover_view")
+require("../click_change")
+require("../click_basal")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
