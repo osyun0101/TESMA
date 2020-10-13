@@ -29,18 +29,6 @@
   cursor: pointer;
 }
 
-#concept-link-button:hover {
-  font-weight: bold;
-}
-
-#math-calory:hover {
-  font-weight: bold;
-}
-
-#basal-about:hover {
-  font-weight: bold;
-}
-
 .selected-list {
   padding: 20px;
   width: calc(100vw - 270px);

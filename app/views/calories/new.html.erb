@@ -1,0 +1,133 @@
+<%=render "shared/header"%>
+
+<div class="header-height">
+<%=form_with local: true do |f|%>
+  <div class="calory-content">
+   <p class="calory-sum">カロリー計算</p>
+    <div class="calory-sum-box">
+      <div class="sum-left">
+        <p>カロリー計算結果</p>
+        <%=f.text_field :calory%>
+        <p class="select-food-name">選択食材</p>
+        <p>肉、米、ゴーヤチャンプル、餃子、人参</p>
+       </div>
+       <div class="eat-menu">
+         <div class="eat-food-box">
+          <div id="meat-box">
+           <div>
+            <p>＊クリックされた方のデータで計算します</p>
+            <ul class="from-meat">
+            <li id="japan-meat">国産</li>
+            <li id="overseas-meat">輸入</li>
+            </ul>
+           </div>
+           <ul class="food-weight">
+           <div class="food-flex">
+             <li>バラ（カルビ）</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+             <li>サーロイン</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+             <li>かたロース</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+              <li>ランプ</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+             <li>リブロース</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+             <li>かた</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+             <li>もも</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+             <li>ヒレ</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+             <li>テール（尾）</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+             <li>タン</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+             <li>はらみ</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+              <li>小腸</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+             <li>大腸</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+             <li>ハツ</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+             <li>レバー</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+             <li>じん臓</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+             <li>直腸</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+             <div class="food-flex">
+             <li>せんまい</li>
+             <%=f.number_field :bara, class: "menu-name"%>g
+             </div>
+           </ul>
+           </div>
+         </div>
+          <div class="calory-box">
+           <div class="select-food">
+           <p>材料選択</p>
+           <ul class="material">
+             <li id="meat">牛肉</li>
+            <li>豚肉</li>
+            <li>鶏肉</li>
+            <li>卵</li>
+            <li>魚</li>
+            <li>米・餅・パン</li>
+            <li>野菜</li>
+            <li>麺類・とうもろこし</li>
+            <li>豆類</li>
+            <li>種実</li>
+            <li>いも</li>
+            <li>果物</li>
+            <li>きのこ</li>
+            <li>藻</li>
+            <li>貝</li>
+            <li>エビ・カニ・イカ・タコ</li>
+            <li>水産練り物</li>
+            <li>乳製品</li>
+            <li>油・バター</li>
+            <li>飲み物</li>
+            <li>調味料</li>
+          </ul>
+         </div>
+        </div>
+       </div>
+    </div>
+  </div>
+  <%= render "shared/footer"%>
+  <% end %>
+</div>

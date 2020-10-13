@@ -3,6 +3,7 @@ document.addEventListener('turbolinks:load', function(){
   if (concept == null){
      return null
   }
+  //tesma_about.html.erbの処理ーーーーーーーーーーーーーーーーーーーーーー
   const math = document.getElementById("math-calory");
   const basal = document.getElementById("basal-about");
   const basalView = document.getElementById("basal-logo-box");
@@ -61,5 +62,7 @@ document.addEventListener('turbolinks:load', function(){
     math.style.fontWeight="normal";
     concept.style.fontWeight="normal";
   }
+
+  //tesma_about.html.erbの処理ーーーーーーーーーーーーーーーーーーーーーー
 
 });

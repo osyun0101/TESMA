@@ -1,0 +1,110 @@
+
+.calory-content {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+
+}
+
+.calory-sum {
+  font-size: 30px;
+  text-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+.calory-sum-box {
+  display: flex;
+  padding-top: 30px;
+}
+
+.sum-left {
+  margin-right: 30px;
+  width: 300px;
+}
+
+.select-food-name {
+  margin-top: 20px;
+}
+
+
+
+.calory-all {
+  margin-right: 30px;
+}
+
+
+.food-weight {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#meat-box {
+  display: block;
+}
+
+.from-meat {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.from-meat li{
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 10px;
+  background-color: rgba(250,128,114,0.4);
+  cursor: pointer;
+}
+
+
+.food-flex {
+  display: flex;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #FAFAD2;
+}
+
+.food-flex li{
+  margin-right: 5px;
+}
+
+.menu-name {
+  margin-right: 3px;
+  width: 60px;
+}
+.calory-box {
+  margin-bottom: 10px;
+}
+
+
+
+.select-food p{
+  margin-bottom: 20px;
+}
+
+.material {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.material li{
+  margin-top: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 200px;
+  height: 100px;
+  cursor: pointer;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.material li:hover {
+  background-color: #FFC7AF;
+}
