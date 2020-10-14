@@ -1,5 +1,6 @@
 class CaloriesController < ApplicationController
   def index
+    
   end
   def new
     @menu_data = MenuDatum.all

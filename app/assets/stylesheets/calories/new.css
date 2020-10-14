@@ -21,6 +21,16 @@
   width: 300px;
 }
 
+
+#math-all{
+  text-align: center;
+}
+
+#math-data {
+  width: 60px;
+  margin-top: 10px;
+}
+
 .select-food-name {
   margin-top: 20px;
 }

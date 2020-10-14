@@ -12,6 +12,7 @@ require("../click_change")
 require("../click_basal")
 require("../select_food")
 require("../click_change_meat")
+require("../calory_math")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

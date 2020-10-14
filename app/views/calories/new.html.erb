@@ -1,41 +1,50 @@
 <%=render "shared/header"%>
 
 <div class="header-height">
-<%=form_with local: true do |f|%>
   <div class="calory-content">
    <p class="calory-sum">カロリー計算</p>
     <div class="calory-sum-box">
+    
       <div class="sum-left">
+      <%=form_with local: true do |f|%>
         <p>カロリー計算結果</p>
-        <%=f.text_field :calory%>
+        <%=f.text_field :calory, id: "math-all"%>
+        <%=f.submit '保存', id: "math-data"%>
         <p class="select-food-name">選択食材</p>
-        <p>肉、米、ゴーヤチャンプル、餃子、人参</p>
+        <ul id="add-text">
+        </ul>
+         <% end %>
        </div>
        <div class="eat-menu">
          <div class="eat-food-box">
+         <%=form_with  id: "menu-data",local: true, method: :get do |f|%>
           <div id="meat-box">
-           <div>
-            <p>＊クリックされた方のデータで計算します</p>
-            <ul class="from-meat">
-            <li id="japan-meat">国産</li>
-            <li id="overseas-meat">輸入</li>
-            </ul>
-           </div>
-           <ul class="food-weight">
-
-            <% @menu_data.each do |menu|%>
-              <div class="food-flex">
-             <li><%= menu.name %></li>
-             <%=f.number_field :bara, class: "menu-name"%>g
+             <div>
+              <p>＊クリックされた方のデータで計算します</p>
+              <ul class="from-meat">
+              <li id="japan-meat">国産</li>
+              <li id="overseas-meat">輸入</li>
+               </ul>
              </div>
-            <% end %>
+          
+             <ul class="food-weight">
 
-           </ul>
-           <div class="ok-button">
-             <%=f.submit "OK", id: "meat-submit"%>
-           </div>
+             <% @menu_data.each do |menu|%>
+              <div class="food-flex">
+             <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
+             <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
+             <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-calory2=<%=menu.calory2%> data-id=<%=menu.id%> >
+             </div>
+             <% end %>
+
+             </ul>
+            
+             <div class="ok-button">
+               <%=f.submit "OK", id: "meat-submit"%>
+             </div>
            </div>
          </div>
+         <% end %>
           <div class="calory-box">
            <div class="select-food">
            <p>材料選択</p>
@@ -68,5 +77,4 @@
     </div>
   </div>
   <%= render "shared/footer"%>
-  <% end %>
 </div>
