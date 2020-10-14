@@ -22,79 +22,18 @@
             </ul>
            </div>
            <ul class="food-weight">
-           <div class="food-flex">
-             <li>バラ（カルビ）</li>
+
+            <% @menu_data.each do |menu|%>
+              <div class="food-flex">
+             <li><%= menu.name %></li>
              <%=f.number_field :bara, class: "menu-name"%>g
              </div>
-             <div class="food-flex">
-             <li>サーロイン</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-             <li>かたロース</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-              <li>ランプ</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-             <li>リブロース</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-             <li>かた</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-             <li>もも</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-             <li>ヒレ</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-             <li>テール（尾）</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-             <li>タン</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-             <li>はらみ</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-              <li>小腸</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-             <li>大腸</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-             <li>ハツ</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-             <li>レバー</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-             <li>じん臓</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-             <li>直腸</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
-             <div class="food-flex">
-             <li>せんまい</li>
-             <%=f.number_field :bara, class: "menu-name"%>g
-             </div>
+            <% end %>
+
            </ul>
+           <div class="ok-button">
+             <%=f.submit "OK", id: "meat-submit"%>
+           </div>
            </div>
          </div>
           <div class="calory-box">

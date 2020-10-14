@@ -37,6 +37,11 @@
   flex-wrap: wrap;
 }
 
+.eat-food-box{
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 #meat-box {
   display: block;
 }
@@ -54,6 +59,8 @@
   margin-right: 10px;
   background-color: rgba(250,128,114,0.4);
   cursor: pointer;
+  width: 100px;
+  text-align: center;
 }
 
 
@@ -62,13 +69,23 @@
   margin-right: 10px;
   margin-bottom: 10px;
   padding: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
   background-color: #FAFAD2;
+  border-radius: 8px;
 }
 
 .food-flex li{
   margin-right: 5px;
+  width: 150px;
+}
+
+.ok-button {
+  display: flex;
+  justify-content: center;
+}
+
+#meat-submit {
+  width: 40px;
+  cursor: pointer;
 }
 
 .menu-name {
