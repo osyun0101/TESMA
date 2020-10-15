@@ -21,6 +21,10 @@
   width: 300px;
 }
 
+.calory-button {
+  display: flex;
+  justify-content: space-around;
+}
 
 #math-all{
   text-align: center;
@@ -29,13 +33,39 @@
 #math-data {
   width: 60px;
   margin-top: 10px;
+  cursor: pointer;
+}
+
+#reset-button {
+  width: 80px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 .select-food-name {
   margin-top: 20px;
 }
 
+.default-none {
+  display: none;
+}
 
+.value-delete {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-this {
+  cursor: pointer;
+  color: #666666;
+  background-color: rgba(239, 239, 239,1);
+  border-radius: 4px;
+  padding: 1px 3px;
+}
+
+.delete-this:hover {
+  background-color: rgba(74, 74, 74,0.4);
+}
 
 .calory-all {
   margin-right: 30px;

@@ -9,7 +9,10 @@
       <%=form_with local: true do |f|%>
         <p>カロリー計算結果</p>
         <%=f.text_field :calory, id: "math-all"%>
+        <div class="calory-button">
         <%=f.submit '保存', id: "math-data"%>
+         <%=f.submit 'リセット', id: "reset-button"%>
+         </div>
         <p class="select-food-name">選択食材</p>
         <ul id="add-text">
         </ul>
@@ -78,3 +81,4 @@
   </div>
   <%= render "shared/footer"%>
 </div>
+
