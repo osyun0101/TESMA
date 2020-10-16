@@ -80,13 +80,10 @@
   flex-wrap: wrap;
 }
 
-.eat-food-box{
+#eat-food-box{
   padding: 10px;
   margin-bottom: 10px;
-}
-
-#meat-box {
-  display: block;
+  display: none;
 }
 
 .small-p {

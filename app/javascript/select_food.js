@@ -1,8 +1,8 @@
 document.addEventListener('turbolinks:load', function(){
   const meat = document.getElementById('meat');
-  const meatBox = document.getElementById('meat-box');
+  const eatBox = document.getElementById('eat-food-box');
 
   meat.addEventListener('click',function(){
-    meatBox.style.display="block";
+    eatBox.style.display="block";
   });
 });
