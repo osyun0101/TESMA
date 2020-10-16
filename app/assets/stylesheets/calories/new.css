@@ -71,6 +71,9 @@
   margin-right: 30px;
 }
 
+#select-food-form {
+  display: none;
+}
 
 .food-weight {
   display: flex;
@@ -84,6 +87,11 @@
 
 #meat-box {
   display: block;
+}
+
+.small-p {
+  font-size: 14px;
+  color: rgba(165, 42, 42,1);
 }
 
 .from-meat {

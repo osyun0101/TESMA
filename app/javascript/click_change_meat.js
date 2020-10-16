@@ -5,6 +5,8 @@ document.addEventListener('turbolinks:load', function(){
   }
   const overseas = document.getElementById('overseas-meat');
 
+  const form = document.getElementById('select-food-form');
+
   japan.addEventListener('click', function(){
     const rgbaOver = document.defaultView.getComputedStyle(overseas, null).backgroundColor;
       if (rgbaOver == "rgb(250, 128, 128)"){
@@ -15,6 +17,9 @@ document.addEventListener('turbolinks:load', function(){
       japan.style.backgroundColor="rgba(250,128,128,1)"
       japan.dataset.number = 1
       overseas.removeAttribute('data-number');
+
+      
+      form.style.display="block"
   });
 
   overseas.addEventListener('click', function(){
@@ -27,5 +32,7 @@ document.addEventListener('turbolinks:load', function(){
       overseas.style.backgroundColor="rgba(250,128,128,1)"
       overseas.dataset.number = 2
       japan.removeAttribute('data-number');
+
+      form.style.display="block"
   });
 });

@@ -6,7 +6,7 @@ document.addEventListener('turbolinks:load', function(){
 
 
     //addTextに追加した要素にクリックイベントをもったli要素を追加する関数
-    function append(kcal){
+    function append(calory){
       const addLi = document.getElementById('add-li')
       const li = document.createElement("li");
       li.innerText="削除";
@@ -14,12 +14,17 @@ document.addEventListener('turbolinks:load', function(){
       li.setAttribute('class', 'delete-this');
       li.onclick = function(){
         li.parentNode.parentNode.remove();
-        count -= kcal
+        count -= calory
         mathAll.value= Math.ceil(count);
       }
       addLi.appendChild(li);
     }
 
+    //OKボタンをクリックした後、入力された値を初期化
+    function valueNone(id){
+      const textField = document.getElementById(`menu${id}`);
+      textField.value='';
+    }
 
     submit.addEventListener('click', function(e){
 
@@ -28,10 +33,10 @@ document.addEventListener('turbolinks:load', function(){
       //for -ofについて for(変数 of 配列){} 指定した配列を変数に一つずつ格納していく
      
      for(const value of data.entries()){
+      const id =document.getElementById(`kcal${value[0]}`).dataset.id;
         if (value[1] != "" && value[1] >= 1){
           const num = document.getElementById('japan-meat').dataset.number;
           const num2 = document.getElementById('overseas-meat').dataset.number;
-          const id =document.getElementById(`kcal${value[0]}`).dataset.id;
                     
           if (num == 1){
             const menuField = document.getElementById(`kcalmenu${id}`);
@@ -54,15 +59,16 @@ document.addEventListener('turbolinks:load', function(){
               const name = document.getElementById(`menu-name-${id}`).innerText;
               addText.insertAdjacentHTML('afterbegin', `<div id=select${id}><li>${name}</li><div class="value-delete" id="add-li"><li>${value[1]}g/${calory}kcal</li></div></div>`)
 
-             append();
+             append(calory);
           }
         } 
+        valueNone(id);
      }
      
      mathAll.value= Math.ceil(count);
     
     //-------------------------------------------
-
+    
      e.preventDefault();
     });
 

@@ -24,12 +24,13 @@
           <div id="meat-box">
              <div>
               <p>＊クリックされた方のデータで計算します</p>
+              <p class="small-p">--クリックすると入力画面が表示されます--</p>
               <ul class="from-meat">
               <li id="japan-meat">国産</li>
               <li id="overseas-meat">輸入</li>
                </ul>
              </div>
-          
+             <div id="select-food-form">
              <ul class="food-weight">
 
              <% @menu_data.each do |menu|%>
@@ -44,6 +45,7 @@
             
              <div class="ok-button">
                <%=f.submit "OK", id: "meat-submit"%>
+             </div>
              </div>
            </div>
          </div>
