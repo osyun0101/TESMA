@@ -4,8 +4,9 @@ document.addEventListener('turbolinks:load', function(){
     return null
   }
   const overseas = document.getElementById('overseas-meat');
-
+  const content = document.getElementById('meat-content');
   const form = document.getElementById('select-food-form');
+  const button = document.getElementById('button-none');
 
   japan.addEventListener('click', function(){
     const rgbaOver = document.defaultView.getComputedStyle(overseas, null).backgroundColor;
@@ -20,6 +21,8 @@ document.addEventListener('turbolinks:load', function(){
 
       
       form.style.display="block"
+      content.style.display="block"
+      button.style.display="flex"
   });
 
   overseas.addEventListener('click', function(){
@@ -34,5 +37,7 @@ document.addEventListener('turbolinks:load', function(){
       japan.removeAttribute('data-number');
 
       form.style.display="block"
+      content.style.display="block"
+      button.style.display="flex"
   });
 });

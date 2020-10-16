@@ -35,10 +35,9 @@ document.addEventListener('turbolinks:load', function(){
      for(const value of data.entries()){
       const id =document.getElementById(`kcal${value[0]}`).dataset.id;
         if (value[1] != "" && value[1] >= 1){
-          const num = document.getElementById('japan-meat').dataset.number;
-          const num2 = document.getElementById('overseas-meat').dataset.number;
+          const num = document.getElementById('overseas-meat').dataset.number;
                     
-          if (num == 1){
+          if (num != 2){
             const menuField = document.getElementById(`kcalmenu${id}`);
             const caloryNum = menuField.dataset.calory
             const calory = Math.round(value[1] * caloryNum);
@@ -50,7 +49,7 @@ document.addEventListener('turbolinks:load', function(){
               //addTextに追加した要素にクリックイベントをもったli要素を追加
               append(calory);
           }
-          if (num2 == 2){
+          else {
             const menuField = document.getElementById(`kcalmenu${id}`)
             const caloryNum = menuField.dataset.calory2
             const calory = Math.round(value[1] * caloryNum);

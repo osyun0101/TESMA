@@ -3,7 +3,8 @@ class CaloriesController < ApplicationController
     
   end
   def new
-    @menu_data = MenuDatum.all
+    @meat_data = MenuDatum.all
+    @pig_data = Pig.all
   end
   def tesma_about
     if params[:data]

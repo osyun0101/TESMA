@@ -75,14 +75,36 @@
   display: none;
 }
 
+.food-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+#meat-content {
+  display: none;
+}
+
+#pig-content {
+  display: none;
+}
+
+#button-none {
+  display: none;
+}
+
 .food-weight {
   display: flex;
   flex-wrap: wrap;
 }
 
-#eat-food-box{
+#menu-data {
   padding: 10px;
   margin-bottom: 10px;
+  display: none;
+}
+
+#meat-from-name {
   display: none;
 }
 

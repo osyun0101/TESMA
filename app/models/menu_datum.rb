@@ -12,11 +12,11 @@ class MenuDatum < ActiveHash::Base
     {id: 10, name: 'タン', calory: 3.56, calory2: 3.56},
     {id: 11, name: '小腸',calory: 2.87, calory2: 2.87},
     {id: 12, name: '大腸', calory: 1.62, calory2: 1.62},
-    {id: 13, name: 'ハツ',calory: 1.42, calory2: 1.42},
+    {id: 13, name: 'ハツ（心臓）',calory: 1.42, calory2: 1.42},
     {id: 14, name: 'レバー', calory: 1.32, calory2: 1.32},
     {id: 15, name: 'じん臓',calory: 1.31, calory2: 1.31},
     {id: 16, name: '直腸', calory: 1.15, calory2: 1.15},
     {id: 17, name: 'せんまい', calory: 0.62, calory2: 0.62},
     {id: 18, name: 'はらみ', calory: 3.01, calory2: 3.01},
-  ]
+]
 end
