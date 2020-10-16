@@ -89,6 +89,10 @@
   display: none;
 }
 
+#bird-content {
+  display: none;
+}
+
 #button-none {
   display: none;
 }

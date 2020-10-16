@@ -59,6 +59,21 @@
 
              </ul>
              </div>
+
+             <div id="bird-content">
+            <p class="food-title">鶏肉</p>
+             <ul class="food-weight">
+             
+             <% @bird_data.each do |menu|%>
+              <div class="food-flex">
+             <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
+             <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
+             <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
+             </div>
+             <% end %>
+
+             </ul>
+             </div>
             
              <div class="ok-button" id="button-none">
                <%=f.submit "OK", id: "meat-submit"%>
@@ -77,7 +92,7 @@
            <ul class="material">
              <li id="meat">牛肉</li>
             <li id="pig">豚肉</li>
-            <li>鶏肉</li>
+            <li id="bird">鶏肉</li>
             <li>卵</li>
             <li>魚</li>
             <li>米・餅・パン</li>

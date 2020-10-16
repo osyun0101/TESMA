@@ -16,25 +16,48 @@ document.addEventListener('turbolinks:load', function(){
   const pig = document.getElementById('pig');
   const pigBox = document.getElementById('pig-content');
 
+  //鳥
+  const bird = document.getElementById('bird');
+  const birdBox = document.getElementById('bird-content');
+
+  //牛肉が国産か輸入かを選択した後に他の種類の食材を選択したとき、それぞれに追加されてるdata属性と背景色を初期化
+  function meatFrom(){
+    japan.style.backgroundColor = "rgba(250,128,128,0.4)";
+    overseas.style.backgroundColor = "rgba(250,128,128,0.4)";
+    overseas.dataset.number = "";
+    japan.dataset.number = "";
+  }
+
+  //材料選択のいずれかのボタンをクリックされたときの処理
+  function displayChange(data){
+    eatBox.style.display="block";
+    pigBox.style.display="none";
+    select.style.display="block";
+    meatBox.style.display="none";
+    from.style.display="none";
+    button.style.display = "flex";
+    birdBox.style.display="none";
+
+    data.style.display="block";
+  }
 
   meat.addEventListener('click',function(){
     eatBox.style.display="block";
     from.style.display="block";
     pigBox.style.display="none";
+    birdBox.style.display="none";
     button.style.display = "none";
   });
 
   pig.addEventListener('click', function(){
-    eatBox.style.display="block";
-    pigBox.style.display="block";
-    select.style.display="block";
-    meatBox.style.display="none";
-    from.style.display="none";
-    button.style.display = "flex";
+    displayChange(pigBox);
 
-    japan.style.backgroundColor = "rgba(250,128,128,0.4)";
-    overseas.style.backgroundColor = "rgba(250,128,128,0.4)";
-    overseas.dataset.number = "";
-    japan.dataset.number = "";
+    meatFrom();
+  });
+
+  bird.addEventListener('click', function(){
+    displayChange(birdBox);
+
+    meatFrom();
   });
 });

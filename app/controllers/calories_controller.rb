@@ -5,6 +5,7 @@ class CaloriesController < ApplicationController
   def new
     @meat_data = MenuDatum.all
     @pig_data = Pig.all
+    @bird_data = Bird.all
   end
   def tesma_about
     if params[:data]
