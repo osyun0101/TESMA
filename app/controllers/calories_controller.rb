@@ -8,6 +8,8 @@ class CaloriesController < ApplicationController
     @bird_data = Bird.all
     @egg_data = Egg.all
     @fish_data = Fish.all
+    @shell_fish_data = ShellFish.all
+    @seafood_data = Seafood.all
   end
   def tesma_about
     if params[:data]
