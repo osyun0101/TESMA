@@ -10,6 +10,7 @@ class CaloriesController < ApplicationController
     @fish_data = Fish.all
     @shell_fish_data = ShellFish.all
     @seafood_data = Seafood.all
+    @paste_data = Paste.all
   end
   def tesma_about
     if params[:data]

@@ -36,6 +36,10 @@ document.addEventListener('turbolinks:load', function(){
   const seafood = document.getElementById('seafood');
   const seafoodBox = document.getElementById('seafood-content');
 
+  //水産練り物
+  const paste = document.getElementById('paste');
+  const pasteBox = document.getElementById('paste-content');
+
 
   //牛肉が国産か輸入かを選択した後に他の種類の食材を選択したとき、それぞれに追加されてるdata属性と背景色を初期化
   function meatFrom(){
@@ -58,6 +62,7 @@ document.addEventListener('turbolinks:load', function(){
     fishBox.style.display="none";
     shellFishBox.style.display = "none";
     seafoodBox.style.display = "none";
+    pasteBox.style.display = "none";
 
     data.style.display="block";
   }
@@ -73,6 +78,7 @@ document.addEventListener('turbolinks:load', function(){
     fishBox.style.display="none";
     shellFishBox.style.display ="none";
     seafoodBox.style.display = "none";
+    pasteBox.style.display = "none";
   });
 
   //豚肉をクリックしたとき
@@ -113,6 +119,13 @@ document.addEventListener('turbolinks:load', function(){
   //エビ、カニ・・・をクリックしたとき
   seafood.addEventListener('click', function(){
     displayChange(seafoodBox);
+
+    meatFrom();
+  });
+
+  //水産練り物をクリックしたとき
+  paste.addEventListener('click', function(){
+    displayChange(pasteBox);
 
     meatFrom();
   });

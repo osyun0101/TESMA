@@ -1,0 +1,2 @@
+class FishEgg < ApplicationRecord
+end

@@ -110,6 +110,10 @@
   display: none;
 }
 
+#paste-content {
+  display: none;
+}
+
 #button-none {
   display: none;
 }
