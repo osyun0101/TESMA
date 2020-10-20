@@ -48,6 +48,15 @@ document.addEventListener('turbolinks:load', function(){
   const seaweed = document.getElementById('seaweed');
   const seaweedBox = document.getElementById('seaweed-content');
 
+  //米など
+  const rice = document.getElementById('rice');
+  const riceBox = document.getElementById('rice-content');
+
+  //野菜など
+  const vegetable = document.getElementById('vegetable');
+  const vegetableBox = document.getElementById('vegetable-content');
+
+
   //牛肉が国産か輸入かを選択した後に他の種類の食材を選択したとき、それぞれに追加されてるdata属性と背景色を初期化
   function meatFrom(){
     japan.style.backgroundColor = "rgba(250,128,128,0.4)";
@@ -72,6 +81,8 @@ document.addEventListener('turbolinks:load', function(){
     pasteBox.style.display = "none";
     fishEggBox.style.display ="none";
     seaweedBox.style.display ="none";
+    riceBox.style.display = "none";
+    vegetableBox.style.display = "none";
 
     data.style.display="block";
   }
@@ -90,6 +101,8 @@ document.addEventListener('turbolinks:load', function(){
     pasteBox.style.display = "none";
     fishEggBox.style.display ="none";
     seaweedBox.style.display ="none";
+    riceBox.style.display = "none";
+    vegetableBox.style.display = "none";
   });
 
   //豚肉をクリックしたとき
@@ -151,6 +164,20 @@ document.addEventListener('turbolinks:load', function(){
   //藻、海藻をクリックしたとき
   seaweed.addEventListener('click', function(){
     displayChange(seaweedBox);
+
+    meatFrom();
+  });
+
+  //米などをクリックしたとき
+  rice.addEventListener('click', function(){
+    displayChange(riceBox);
+
+    meatFrom();
+  });
+
+  //野菜をクリックしたとき
+  vegetable.addEventListener('click', function(){
+    displayChange(vegetableBox);
 
     meatFrom();
   });

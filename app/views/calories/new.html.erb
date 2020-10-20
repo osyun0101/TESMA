@@ -186,6 +186,37 @@
              </div>
             <!-- 藻、海藻 ------------------------------------------------------------>
 
+            <!-- 米、餅など ------------------------------------------------------------>
+            <div id="rice-content">
+            <p class="food-title">米、餅、パン</p>
+            <p class="small-p">--目安（ご飯は茶碗に小盛りで120g、普通盛りで150g、大盛りで200g）--</p>
+             <ul class="food-weight">
+              <% @rice_data.each do |menu|%>
+              <div class="food-flex">
+                <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
+                 <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
+                 <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
+              </div>
+              <% end %>
+             </ul>
+             </div>
+            <!-- 米、餅など ------------------------------------------------------------>
+
+            <!-- 野菜 ------------------------------------------------------------>
+            <div id="vegetable-content">
+            <p class="food-title">野菜</p>
+             <ul class="food-weight">
+              <% @vegetable_data.each do |menu|%>
+              <div class="food-flex">
+                <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
+                 <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
+                 <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
+              </div>
+              <% end %>
+             </ul>
+             </div>
+            <!-- 野菜 ------------------------------------------------------------>
+
              <div class="ok-button" id="button-none">
                <%=f.submit "OK", id: "meat-submit"%>
              </div>
@@ -208,8 +239,8 @@
             <li id="paste">水産練り物</li>
             <li id="fish-egg">魚卵</li>
             <li id="seaweed">藻、海藻</li>
-            <li>米・餅・パン</li>
-            <li>野菜</li>
+            <li id="rice">米・餅・パン</li>
+            <li id="vegetable">野菜</li>
             <li>麺類・とうもろこし</li>
             <li>豆類</li>
             <li>種実</li>

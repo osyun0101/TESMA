@@ -122,6 +122,14 @@
   display: none;
 }
 
+#rice-content {
+  display: none;
+}
+
+#vegetable-content {
+  display: none;
+}
+
 #button-none {
   display: none;
 }

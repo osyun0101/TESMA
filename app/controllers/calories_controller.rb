@@ -13,6 +13,8 @@ class CaloriesController < ApplicationController
     @paste_data = Paste.all
     @fish_egg_data = FishEgg.all
     @seaweed_data = Seaweed.all
+    @rice_data = Rice.all
+    @vegetable_data = Vegetable.all
   end
   def tesma_about
     if params[:data]
