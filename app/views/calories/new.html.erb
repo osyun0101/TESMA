@@ -156,6 +156,36 @@
              </div>
             <!-- 水産練り物 ------------------------------------------------------------>
 
+            <!-- 魚卵 ------------------------------------------------------------>
+            <div id="fish-egg-content">
+            <p class="food-title">魚卵</p>
+             <ul class="food-weight">
+             <% @fish_egg_data.each do |menu|%>
+              <div class="food-flex">
+             <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
+             <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
+             <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
+             </div>
+             <% end %>
+             </ul>
+             </div>
+            <!-- 魚卵 ------------------------------------------------------------>
+
+            <!-- 藻、海藻 ------------------------------------------------------------>
+            <div id="seaweed-content">
+            <p class="food-title">藻、海藻</p>
+             <ul class="food-weight">
+             <% @seaweed_data.each do |menu|%>
+              <div class="food-flex">
+             <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
+             <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
+             <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
+             </div>
+             <% end %>
+             </ul>
+             </div>
+            <!-- 藻、海藻 ------------------------------------------------------------>
+
              <div class="ok-button" id="button-none">
                <%=f.submit "OK", id: "meat-submit"%>
              </div>
@@ -177,7 +207,7 @@
             <li id="seafood">エビ・カニ・イカ・タコ</li>
             <li id="paste">水産練り物</li>
             <li id="fish-egg">魚卵</li>
-            <li>藻</li>
+            <li id="seaweed">藻、海藻</li>
             <li>米・餅・パン</li>
             <li>野菜</li>
             <li>麺類・とうもろこし</li>

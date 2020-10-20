@@ -114,6 +114,14 @@
   display: none;
 }
 
+#fish-egg-content {
+  display: none;
+}
+
+#seaweed-content {
+  display: none;
+}
+
 #button-none {
   display: none;
 }
