@@ -1,9 +1,14 @@
 
-.calory-content {
+.max-height {
+  height: 100%;
+}
+
+#calory-content {
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 30px;
-
+  height: 100%;
+  overflow: scroll;
 }
 
 .calory-sum {
@@ -90,6 +95,10 @@
 }
 
 #bird-content {
+  display: none;
+}
+
+#fish-content {
   display: none;
 }
 

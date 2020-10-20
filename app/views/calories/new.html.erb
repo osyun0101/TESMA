@@ -1,7 +1,7 @@
 <%=render "shared/header"%>
 
-<div class="header-height">
-  <div class="calory-content">
+<div class="header-height max-height">
+  <div id="calory-content">
    <p class="calory-sum">カロリー計算</p>
     <div class="calory-sum-box">
     
@@ -31,6 +31,7 @@
                </ul>
              </div>
              <div id="select-food-form">
+              <!-- 牛肉 ------------------------------------------------------>
              <div id="meat-content">
              <p class="food-title">牛肉</p>
              <ul class="food-weight">
@@ -44,7 +45,9 @@
              <% end %>
               </div>
              </ul>
+               <!-- 牛肉 ------------------------------------------------------>
 
+             <!-- 豚肉 ------------------------------------------------------>
             <div id="pig-content">
             <p class="food-title">豚肉</p>
              <ul class="food-weight">
@@ -60,10 +63,12 @@
              </ul>
              </div>
 
+            <!-- 豚肉 ------------------------------------------------------------>
+
+            <!-- 鶏肉 ------------------------------------------------------------>
              <div id="bird-content">
             <p class="food-title">鶏肉</p>
              <ul class="food-weight">
-             
              <% @bird_data.each do |menu|%>
               <div class="food-flex">
              <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
@@ -71,10 +76,42 @@
              <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
              </div>
              <% end %>
-
              </ul>
              </div>
-            
+            <!-- 鶏肉 ------------------------------------------------------------>
+
+            <!-- 卵 ------------------------------------------------------------>
+            <div id="egg-content">
+            <p class="food-title">卵</p>
+            <p class="small-p">--黄身と卵白は卵一個あたりに含まれるそれぞれのカロリー数で計算します--</p>
+             <ul class="food-weight">
+             <% @egg_data.each do |menu|%>
+              <div class="food-flex">
+             <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
+             <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>個
+             <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
+             </div>
+             <% end %>
+             </ul>
+             </div>
+            <!-- 卵 ------------------------------------------------------------>
+
+            <!-- 魚 ------------------------------------------------------------>
+            <div id="fish-content">
+            <p class="food-title">魚</p>
+             <ul class="food-weight">
+             <% @fish_data.each do |menu|%>
+              <div class="food-flex">
+             <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
+             <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>個
+             <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
+             </div>
+             <% end %>
+             </ul>
+             </div>
+            <!-- 魚 ------------------------------------------------------------>
+
+
              <div class="ok-button" id="button-none">
                <%=f.submit "OK", id: "meat-submit"%>
              </div>
@@ -82,9 +119,6 @@
            </div>
          </div>
 
-          <!-- 豚肉 -->
-          
-         <!-- 豚肉 -->
          <% end %>
           <div class="calory-box">
            <div class="select-food">
@@ -93,8 +127,12 @@
              <li id="meat">牛肉</li>
             <li id="pig">豚肉</li>
             <li id="bird">鶏肉</li>
-            <li>卵</li>
+            <li id="egg">卵</li>
             <li>魚</li>
+            <li>貝</li>
+            <li>エビ・カニ・イカ・タコ</li>
+            <li>魚卵</li>
+            <li>藻</li>
             <li>米・餅・パン</li>
             <li>野菜</li>
             <li>麺類・とうもろこし</li>
@@ -103,10 +141,6 @@
             <li>いも</li>
             <li>果物</li>
             <li>きのこ</li>
-            <li>藻</li>
-            <li>貝</li>
-            <li>エビ・カニ・イカ・タコ</li>
-            <li>水産練り物</li>
             <li>乳製品</li>
             <li>油・バター</li>
             <li>飲み物</li>
@@ -119,4 +153,5 @@
   </div>
   <%= render "shared/footer"%>
 </div>
+
 
