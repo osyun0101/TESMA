@@ -24,6 +24,10 @@ document.addEventListener('turbolinks:load', function(){
   const egg = document.getElementById('egg');
   const eggBox = document.getElementById('egg-content');
 
+  //魚
+  const fish = document.getElementById('fish');
+  const fishBox = document.getElementById('fish-content');
+
 
   //牛肉が国産か輸入かを選択した後に他の種類の食材を選択したとき、それぞれに追加されてるdata属性と背景色を初期化
   function meatFrom(){
@@ -43,6 +47,7 @@ document.addEventListener('turbolinks:load', function(){
     button.style.display = "flex";
     birdBox.style.display="none";
     eggBox.style.display="none";
+    fishBox.style.display="none";
 
     data.style.display="block";
   }
@@ -55,6 +60,7 @@ document.addEventListener('turbolinks:load', function(){
     birdBox.style.display="none";
     eggBox.style.display="none";
     button.style.display = "none";
+    fishBox.style.display="none";
   });
 
   //豚肉をクリックしたとき
@@ -74,6 +80,13 @@ document.addEventListener('turbolinks:load', function(){
   //卵をクリックしたとき
   egg.addEventListener('click', function(){
     displayChange(eggBox);
+
+    meatFrom();
+  });
+
+  //魚をクリックしたとき
+  fish.addEventListener('click', function(){
+    displayChange(fishBox);
 
     meatFrom();
   });
