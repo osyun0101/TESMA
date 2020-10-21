@@ -15,6 +15,7 @@ class CaloriesController < ApplicationController
     @seaweed_data = Seaweed.all
     @rice_data = Rice.all
     @vegetable_data = Vegetable.all
+    @noodle_data = Noodle.all
   end
   def tesma_about
     if params[:data]

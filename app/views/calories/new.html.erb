@@ -43,8 +43,9 @@
              <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-calory2=<%=menu.calory2%> data-id=<%=menu.id%> >
              </div>
              <% end %>
-              </div>
+             <%=render "shared/hidden_add"%>
              </ul>
+             </div>
                <!-- 牛肉 ------------------------------------------------------>
 
              <!-- 豚肉 ------------------------------------------------------>
@@ -59,7 +60,7 @@
              <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
              </div>
              <% end %>
-
+              <%=render "shared/hidden_add"%>
              </ul>
              </div>
 
@@ -76,6 +77,7 @@
              <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
              </div>
              <% end %>
+             <%=render "shared/hidden_add"%>
              </ul>
              </div>
             <!-- 鶏肉 ------------------------------------------------------------>
@@ -92,6 +94,7 @@
              <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
              </div>
              <% end %>
+             <%=render "shared/hidden_add"%>
              </ul>
              </div>
             <!-- 卵 ------------------------------------------------------------>
@@ -107,6 +110,7 @@
              <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
              </div>
              <% end %>
+             <%=render "shared/hidden_add"%>
              </ul>
              </div>
             <!-- 魚 ------------------------------------------------------------>
@@ -122,6 +126,7 @@
              <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
              </div>
              <% end %>
+             <%=render "shared/hidden_add"%>
              </ul>
              </div>
             <!-- 貝 ------------------------------------------------------------>
@@ -137,6 +142,7 @@
              <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
              </div>
              <% end %>
+             <%=render "shared/hidden_add"%>
              </ul>
              </div>
             <!-- エビ、カニ ------------------------------------------------------------>
@@ -152,6 +158,7 @@
              <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
              </div>
              <% end %>
+             <%=render "shared/hidden_add"%>
              </ul>
              </div>
             <!-- 水産練り物 ------------------------------------------------------------>
@@ -167,6 +174,7 @@
              <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
              </div>
              <% end %>
+             <%=render "shared/hidden_add"%>
              </ul>
              </div>
             <!-- 魚卵 ------------------------------------------------------------>
@@ -182,6 +190,7 @@
              <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
              </div>
              <% end %>
+             <%=render "shared/hidden_add"%>
              </ul>
              </div>
             <!-- 藻、海藻 ------------------------------------------------------------>
@@ -198,6 +207,7 @@
                  <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
               </div>
               <% end %>
+              <%=render "shared/hidden_add"%>
              </ul>
              </div>
             <!-- 米、餅など ------------------------------------------------------------>
@@ -213,9 +223,28 @@
                  <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
               </div>
               <% end %>
+              <%=render "shared/hidden_add"%>
              </ul>
              </div>
+
             <!-- 野菜 ------------------------------------------------------------>
+
+            <!-- 麺類 ------------------------------------------------------------>
+            <div id="noodle-content">
+            <p class="food-title">麺類</p>
+             <ul class="food-weight">
+              <% @noodle_data.each do |menu|%>
+              <div class="food-flex">
+                <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
+                 <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
+                 <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
+              </div>
+              <% end %>
+              <%=render "shared/hidden_add"%>
+             </ul>
+             </div>
+            <!-- 麺類 ------------------------------------------------------------>
+ 
 
              <div class="ok-button" id="button-none">
                <%=f.submit "OK", id: "meat-submit"%>
@@ -241,7 +270,7 @@
             <li id="seaweed">藻、海藻</li>
             <li id="rice">米・餅・パン</li>
             <li id="vegetable">野菜</li>
-            <li>麺類・とうもろこし</li>
+            <li id="noodle">麺類</li>
             <li>豆類</li>
             <li>種実</li>
             <li>いも</li>
