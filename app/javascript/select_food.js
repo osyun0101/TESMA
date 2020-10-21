@@ -60,6 +60,10 @@ document.addEventListener('turbolinks:load', function(){
   const noodle = document.getElementById('noodle');
   const noodleBox = document.getElementById('noodle-content');
 
+  //豆類など
+  const bean = document.getElementById('bean');
+  const beanBox = document.getElementById('bean-content');
+
 
   //牛肉が国産か輸入かを選択した後に他の種類の食材を選択したとき、それぞれに追加されてるdata属性と背景色を初期化
   function meatFrom(){
@@ -88,6 +92,7 @@ document.addEventListener('turbolinks:load', function(){
     riceBox.style.display = "none";
     vegetableBox.style.display = "none";
     noodleBox.style.display = "none";
+    beanBox.style.display = "none";
 
     data.style.display="block";
   }
@@ -109,6 +114,7 @@ document.addEventListener('turbolinks:load', function(){
     riceBox.style.display = "none";
     vegetableBox.style.display = "none";
     noodleBox.style.display = "none";
+    beanBox.style.display = "none";
   });
 
   //豚肉をクリックしたとき
@@ -191,6 +197,13 @@ document.addEventListener('turbolinks:load', function(){
   //麺類をクリックしたとき
   noodle.addEventListener('click', function(){
     displayChange(noodleBox);
+
+    meatFrom();
+  });
+
+  //豆類をクリックしたとき
+  bean.addEventListener('click', function(){
+    displayChange(beanBox);
 
     meatFrom();
   });
