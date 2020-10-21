@@ -72,6 +72,10 @@ document.addEventListener('turbolinks:load', function(){
   const potato = document.getElementById('potato');
   const potatoBox = document.getElementById('potato-content');
 
+  //果物など
+  const fruit = document.getElementById('fruit');
+  const fruitBox = document.getElementById('fruit-content');
+
 
   //牛肉が国産か輸入かを選択した後に他の種類の食材を選択したとき、それぞれに追加されてるdata属性と背景色を初期化
   function meatFrom(){
@@ -103,6 +107,7 @@ document.addEventListener('turbolinks:load', function(){
     beanBox.style.display = "none";
     nutBox.style.display = "none";
     potatoBox.style.display = "none";
+    fruitBox.style.display = "none";
 
     data.style.display="block";
   }
@@ -127,6 +132,7 @@ document.addEventListener('turbolinks:load', function(){
     beanBox.style.display = "none";
     nutBox.style.display = "none";
     potatoBox.style.display = "none";
+    fruitBox.style.display = "none";
   });
 
   //豚肉をクリックしたとき
@@ -230,6 +236,13 @@ document.addEventListener('turbolinks:load', function(){
   //いもをクリックしたとき
   potato.addEventListener('click', function(){
     displayChange(potatoBox);
+
+    meatFrom();
+  });
+
+  //果物をクリックしたとき
+  fruit.addEventListener('click', function(){
+    displayChange(fruitBox);
 
     meatFrom();
   });

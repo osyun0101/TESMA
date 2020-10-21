@@ -6,5 +6,6 @@ class Potato < ActiveHash::Base
     {id: 191, name: 'ながいも',calory: 0.65},
     {id: 192, name: '自然薯',calory: 1.22},
     {id: 193, name: '山芋',calory: 1.01},
+    {id: 194, name: 'フライドポテト',calory: 3.88},
   ]
 end

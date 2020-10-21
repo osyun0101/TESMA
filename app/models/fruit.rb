@@ -1,0 +1,25 @@
+class Fruit < ActiveHash::Base
+  self.data = [
+    {id: 195, name: 'りんご',calory: 0.54},
+    {id: 196, name: 'レモン',calory: 0.54},
+    {id: 197, name: 'キウイ',calory: 0.53},
+    {id: 198, name: 'パイナップル',calory: 0.51},
+    {id: 199, name: 'みかん',calory: 0.46},
+    {id: 200, name: 'なし',calory: 0.43},
+    {id: 201, name: 'メロン',calory: 0.42},
+    {id: 202, name: 'もも',calory: 0.4},
+    {id: 203, name: 'グレープフルーツ',calory: 0.38},
+    {id: 204, name: 'スイカ',calory: 0.37},
+    {id: 205, name: 'イチゴ',calory: 0.34},
+    {id: 206, name: 'ぶどう',calory: 0.59},
+    {id: 207, name: '干しぶどう',calory: 3.01},
+    {id: 208, name: '干し柿',calory: 2.76},
+    {id: 209, name: 'アボガド',calory: 1.87},
+    {id: 210, name: 'バナナ',calory: 0.86},
+    {id: 211, name: 'さくらんぼ',calory: 6.6},
+    {id: 212, name: 'マンゴー',calory: 0.64},
+    {id: 213, name: 'ライチ',calory: 0.63},
+    {id: 214, name: '柿',calory: 0.6},
+    {id: 215, name: 'いちじく',calory: 0.54},
+  ]
+end

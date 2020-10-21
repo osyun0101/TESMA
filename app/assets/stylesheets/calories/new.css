@@ -146,6 +146,10 @@
   display: none;
 }
 
+#fruit-content {
+  display: none;
+}
+
 #button-none {
   display: none;
 }
