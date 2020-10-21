@@ -8,5 +8,6 @@ class Milk < ActiveHash::Base
     {id: 232, name: 'カマンベールチーズ',calory: 3.11},
     {id: 233, name: 'パルメザンチーズ',calory: 4.76},
     {id: 234, name: 'ブルーチーズ',calory: 3.5},
+    {id: 235, name: 'バター',calory: 7.45},
   ]
 end

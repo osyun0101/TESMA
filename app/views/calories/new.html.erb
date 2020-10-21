@@ -352,6 +352,28 @@
              </div> 
             <!-- 乳製品 ------------------------------------------------------------>
 
+            <!-- 油 ------------------------------------------------------------>
+            <div id="oil-content">
+            <p class="food-title">油</p>
+            <p class="small-p">--油は、どの種類でもカロリーはほとんど変わらないため一律で計算します--</p>
+            <p class="small-p">--大さじ、小さじの部分には使用した杯数を入力してください--</p>
+             <ul class="food-weight">
+             <% @oil_data.each_with_index do |menu, i|%>  
+              <div class="food-flex">
+                <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
+                <% if i == 0 %>
+                 <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
+                 <%else%>
+                 <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>杯
+                 <%end%>
+                 <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
+              </div>
+              <% end %>
+              <%=render "shared/hidden_add"%>
+             </ul>
+             </div> 
+            <!-- 油 ------------------------------------------------------------>
+
              <div class="ok-button" id="button-none">
                <%=f.submit "OK", id: "meat-submit"%>
              </div>
@@ -383,7 +405,7 @@
             <li id="fruit">果物</li>
             <li id="mushroom">きのこ</li>
             <li id="milk">乳製品</li>
-            <li>油・バター</li>
+            <li id="oil">油</li>
             <li>飲み物</li>
             <li>調味料</li>
           </ul>

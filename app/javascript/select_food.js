@@ -84,6 +84,10 @@ document.addEventListener('turbolinks:load', function(){
   const milk = document.getElementById('milk');
   const milkBox = document.getElementById('milk-content');
 
+  //油など
+  const oil = document.getElementById('oil');
+  const oilBox = document.getElementById('oil-content');
+
 
   //牛肉が国産か輸入かを選択した後に他の種類の食材を選択したとき、それぞれに追加されてるdata属性と背景色を初期化
   function meatFrom(){
@@ -118,6 +122,7 @@ document.addEventListener('turbolinks:load', function(){
     fruitBox.style.display = "none";
     mushroomBox.style.display = "none";
     milkBox.style.display = "none";
+    oilBox.style.display = "none";
 
     data.style.display="block";
   }
@@ -145,6 +150,7 @@ document.addEventListener('turbolinks:load', function(){
     fruitBox.style.display = "none";
     mushroomBox.style.display = "none";
     milkBox.style.display = "none";
+    oilBox.style.display = "none";
   });
 
   //豚肉をクリックしたとき
@@ -269,6 +275,13 @@ document.addEventListener('turbolinks:load', function(){
   //乳製品をクリックしたとき
   milk.addEventListener('click', function(){
     displayChange(milkBox);
+
+    meatFrom();
+  });
+
+  //油をクリックしたとき
+  oil.addEventListener('click', function(){
+    displayChange(oilBox);
 
     meatFrom();
   });
