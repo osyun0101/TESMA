@@ -138,6 +138,10 @@
   display: none;
 }
 
+#nut-content {
+  display: none;
+}
+
 #button-none {
   display: none;
 }
