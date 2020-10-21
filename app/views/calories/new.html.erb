@@ -374,6 +374,23 @@
              </div> 
             <!-- 油 ------------------------------------------------------------>
 
+            <!-- 調味料 ------------------------------------------------------------>
+            <div id="seasoning-content">
+            <p class="food-title">調味料</p>
+            <p class="small-p">--塩のカロリーは0であるため表示していません--</p>
+             <ul class="food-weight">
+             <% @seasoning_data.each do |menu|%>  
+              <div class="food-flex">
+                <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
+                 <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
+                 <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
+              </div>
+              <% end %>
+              <%=render "shared/hidden_add"%>
+             </ul>
+             </div> 
+            <!-- 調味料 ------------------------------------------------------------>
+
              <div class="ok-button" id="button-none">
                <%=f.submit "OK", id: "meat-submit"%>
              </div>
@@ -406,8 +423,7 @@
             <li id="mushroom">きのこ</li>
             <li id="milk">乳製品</li>
             <li id="oil">油</li>
-            <li>飲み物</li>
-            <li>調味料</li>
+            <li id="seasoning">調味料</li>
           </ul>
          </div>
         </div>

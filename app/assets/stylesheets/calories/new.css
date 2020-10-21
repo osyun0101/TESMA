@@ -162,6 +162,10 @@
   display: none;
 }
 
+#seasoning-content {
+  display: none;
+}
+
 #button-none {
   display: none;
 }

@@ -23,6 +23,7 @@ class CaloriesController < ApplicationController
     @mushroom_data = Mushroom.all
     @milk_data = Milk.all
     @oil_data = Oil.all
+    @seasoning_data = Seasoning.all
   end
   def tesma_about
     if params[:data]

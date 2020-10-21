@@ -84,9 +84,13 @@ document.addEventListener('turbolinks:load', function(){
   const milk = document.getElementById('milk');
   const milkBox = document.getElementById('milk-content');
 
-  //油など
+  //油
   const oil = document.getElementById('oil');
   const oilBox = document.getElementById('oil-content');
+
+  //調味料
+  const seasoning = document.getElementById('seasoning');
+  const seasoningBox = document.getElementById('seasoning-content');
 
 
   //牛肉が国産か輸入かを選択した後に他の種類の食材を選択したとき、それぞれに追加されてるdata属性と背景色を初期化
@@ -123,6 +127,7 @@ document.addEventListener('turbolinks:load', function(){
     mushroomBox.style.display = "none";
     milkBox.style.display = "none";
     oilBox.style.display = "none";
+    seasoningBox.style.display = "none";
 
     data.style.display="block";
   }
@@ -151,6 +156,7 @@ document.addEventListener('turbolinks:load', function(){
     mushroomBox.style.display = "none";
     milkBox.style.display = "none";
     oilBox.style.display = "none";
+    seasoningBox.style.display = "none";
   });
 
   //豚肉をクリックしたとき
@@ -282,6 +288,13 @@ document.addEventListener('turbolinks:load', function(){
   //油をクリックしたとき
   oil.addEventListener('click', function(){
     displayChange(oilBox);
+
+    meatFrom();
+  });
+
+  //調味料をクリックしたとき
+  seasoning.addEventListener('click', function(){
+    displayChange(seasoningBox);
 
     meatFrom();
   });
