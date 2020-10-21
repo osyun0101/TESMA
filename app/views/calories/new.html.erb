@@ -320,6 +320,22 @@
              </div> 
             <!-- 果物 ------------------------------------------------------------>
 
+            <!-- きのこ ------------------------------------------------------------>
+            <div id="mushroom-content">
+            <p class="food-title">きのこ</p>
+             <ul class="food-weight">
+             <% @mushroom_data.each do |menu|%>  
+              <div class="food-flex">
+                <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
+                 <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
+                 <input id=<%="kcalmenu#{menu.id}"%> type="hidden" data-calory=<%=menu.calory%> data-id=<%=menu.id%>>
+              </div>
+              <% end %>
+              <%=render "shared/hidden_add"%>
+             </ul>
+             </div> 
+            <!-- きのこ ------------------------------------------------------------>
+
              <div class="ok-button" id="button-none">
                <%=f.submit "OK", id: "meat-submit"%>
              </div>
@@ -349,7 +365,7 @@
             <li id="nut">種実</li>
             <li id="potato">いも</li>
             <li id="fruit">果物</li>
-            <li>きのこ</li>
+            <li id="mushroom">きのこ</li>
             <li>乳製品</li>
             <li>油・バター</li>
             <li>飲み物</li>

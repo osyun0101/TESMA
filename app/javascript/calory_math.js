@@ -40,7 +40,10 @@ document.addEventListener('turbolinks:load', function(){
           if (num != 2){
             const menuField = document.getElementById(`kcalmenu${id}`);
             const caloryNum = menuField.dataset.calory
-            const calory = Math.round(value[1] * caloryNum);
+            let calory = Math.round(value[1] * caloryNum);
+            if (calory == 0){
+              calory = 1
+            }
               count += calory
               //下記は選択された食品名を選択食材に表示するための処理
               const name = document.getElementById(`menu-name-${id}`).innerText;
@@ -52,7 +55,10 @@ document.addEventListener('turbolinks:load', function(){
           else {
             const menuField = document.getElementById(`kcalmenu${id}`)
             const caloryNum = menuField.dataset.calory2
-            const calory = Math.round(value[1] * caloryNum);
+            let calory = Math.round(value[1] * caloryNum);
+            if (calory == 0){
+              calory = 1
+            }
                 count += calory
               //下記は選択された食品名を選択食材に表示するための処理
               const name = document.getElementById(`menu-name-${id}`).innerText;

@@ -150,6 +150,10 @@
   display: none;
 }
 
+#mushroom-content {
+  display: none;
+}
+
 #button-none {
   display: none;
 }
