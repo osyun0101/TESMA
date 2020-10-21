@@ -18,6 +18,7 @@ class CaloriesController < ApplicationController
     @noodle_data = Noodle.all
     @bean_data = Bean.all
     @nut_data = Nut.all
+    @potato_data = Potato.all
   end
   def tesma_about
     if params[:data]

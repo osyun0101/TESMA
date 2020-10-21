@@ -142,6 +142,10 @@
   display: none;
 }
 
+#potato-content {
+  display: none;
+}
+
 #button-none {
   display: none;
 }
