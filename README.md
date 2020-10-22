@@ -33,10 +33,6 @@ Things you may want to cover:
 | name     | string | null: false |
 | email    | string | null: false |
 | password | string | null: false |
-| last_name| string | null: false |
-| first_name| string | null: false |
-| last_name_kana| string | null: false |
-| first_name_kana| string | null: false |
 | birth_date| date | null: false |
 | phone_number| string | null: false |
 
