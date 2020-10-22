@@ -267,6 +267,7 @@
 
 .food-flex {
   display: flex;
+  align-items: center;
   margin-right: 10px;
   margin-bottom: 10px;
   padding: 15px;
@@ -322,6 +323,7 @@
   justify-content: center;
   padding: 5px;
 }
+
 
 .material li:hover {
   background-color: #FFC7AF;

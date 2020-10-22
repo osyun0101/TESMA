@@ -132,6 +132,33 @@ document.addEventListener('turbolinks:load', function(){
     data.style.display="block";
   }
 
+  //クリックした箇所の背景色を変更
+  function backChange(self){
+      meat.style.backgroundColor = "orange"
+      pig.style.backgroundColor = "orange"
+      bird.style.backgroundColor = "orange"
+      egg.style.backgroundColor = "orange"
+      fish.style.backgroundColor = "orange"
+      shellFish.style.backgroundColor = "orange"
+      seafood.style.backgroundColor = "orange"
+      paste.style.backgroundColor = "orange"
+      fishEgg.style.backgroundColor = "orange"
+      seaweed.style.backgroundColor = "orange"
+      rice.style.backgroundColor = "orange"
+      vegetable.style.backgroundColor = "orange"
+      noodle.style.backgroundColor = "orange"
+      bean.style.backgroundColor = "orange"
+      nut.style.backgroundColor = "orange"
+      potato.style.backgroundColor = "orange"
+      fruit.style.backgroundColor = "orange"
+      mushroom.style.backgroundColor = "orange"
+      milk.style.backgroundColor = "orange"
+      oil.style.backgroundColor = "orange"
+      seasoning.style.backgroundColor = "orange"
+
+      self.style.backgroundColor = "#FFC7AF";
+  }
+
   //牛肉をクリックしたとき
   meat.addEventListener('click',function(){
     eatBox.style.display="block";
@@ -157,6 +184,8 @@ document.addEventListener('turbolinks:load', function(){
     milkBox.style.display = "none";
     oilBox.style.display = "none";
     seasoningBox.style.display = "none";
+    
+    backChange(meat);
   });
 
   //豚肉をクリックしたとき
@@ -164,6 +193,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(pigBox);
 
     meatFrom();
+
+    backChange(pig);
   });
 
   //鶏肉をクリックしたとき
@@ -171,6 +202,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(birdBox);
 
     meatFrom();
+
+    backChange(bird);
   });
 
   //卵をクリックしたとき
@@ -178,6 +211,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(eggBox);
 
     meatFrom();
+
+    backChange(egg);
   });
 
   //魚をクリックしたとき
@@ -185,6 +220,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(fishBox);
 
     meatFrom();
+
+    backChange(fish);
   });
 
   //貝をクリックしたとき
@@ -192,6 +229,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(shellFishBox);
 
     meatFrom();
+
+    backChange(shellFish);
   });
 
   //エビ、カニ・・・をクリックしたとき
@@ -199,6 +238,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(seafoodBox);
 
     meatFrom();
+
+    backChange(seafood);
   });
 
   //水産練り物をクリックしたとき
@@ -206,6 +247,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(pasteBox);
 
     meatFrom();
+
+    backChange(paste);
   });
 
   //魚卵をクリックしたとき
@@ -213,6 +256,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(fishEggBox);
 
     meatFrom();
+
+    backChange(fishEgg);
   });
 
   //藻、海藻をクリックしたとき
@@ -220,6 +265,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(seaweedBox);
 
     meatFrom();
+
+    backChange(seaweed);
   });
 
   //米などをクリックしたとき
@@ -227,6 +274,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(riceBox);
 
     meatFrom();
+
+    backChange(rice);
   });
 
   //野菜をクリックしたとき
@@ -234,6 +283,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(vegetableBox);
 
     meatFrom();
+
+    backChange(vegetable);
   });
 
   //麺類をクリックしたとき
@@ -241,6 +292,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(noodleBox);
 
     meatFrom();
+
+    backChange(noodle);
   });
 
   //豆類をクリックしたとき
@@ -248,6 +301,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(beanBox);
 
     meatFrom();
+
+    backChange(bean);
   });
 
   //種実をクリックしたとき
@@ -255,6 +310,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(nutBox);
 
     meatFrom();
+
+    backChange(nut);
   });
 
   //いもをクリックしたとき
@@ -262,6 +319,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(potatoBox);
 
     meatFrom();
+
+    backChange(potato);
   });
 
   //果物をクリックしたとき
@@ -269,6 +328,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(fruitBox);
 
     meatFrom();
+
+    backChange(fruit);
   });
 
   //きのこをクリックしたとき
@@ -276,6 +337,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(mushroomBox);
 
     meatFrom();
+
+    backChange(mushroom);
   });
 
   //乳製品をクリックしたとき
@@ -283,6 +346,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(milkBox);
 
     meatFrom();
+
+    backChange(milk);
   });
 
   //油をクリックしたとき
@@ -290,6 +355,8 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(oilBox);
 
     meatFrom();
+
+    backChange(oil);
   });
 
   //調味料をクリックしたとき
@@ -297,5 +364,7 @@ document.addEventListener('turbolinks:load', function(){
     displayChange(seasoningBox);
 
     meatFrom();
+
+    backChange(seasoning);
   });
 });
