@@ -1,6 +1,9 @@
 document.addEventListener('turbolinks:load', function(){
   //共通
   const eatBox = document.getElementById('menu-data');
+  if (eatBox == null) {
+    return null
+  }
   const select = document.getElementById('select-food-form');
   const button =document.getElementById('button-none');
   const japan = document.getElementById('japan-meat');

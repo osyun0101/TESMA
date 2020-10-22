@@ -1,5 +1,8 @@
 document.addEventListener('turbolinks:load', function(){
     const submit = document.getElementById("meat-submit");
+    if (submit == null ){
+      return null
+    }
     let count = 0
     const mathAll = document.getElementById('math-all');
     const addText = document.getElementById('add-text'); //選択食材のul要素
