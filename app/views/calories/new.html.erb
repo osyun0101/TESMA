@@ -6,9 +6,9 @@
     <div class="calory-sum-box">
     
       <div class="sum-left">
-      <%=form_with local: true do |f|%>
+      <%=form_with model: @calory, url: calories_path, local: true do |f|%>
         <p>カロリー計算結果</p>
-        <%=f.text_field :calory, id: "math-all"%>
+        <%=f.number_field :calory, id: "math-all"%>
         <div class="calory-button">
         <%=f.submit '保存', id: "math-data"%>
          <%=f.submit 'リセット', id: "reset-button"%>

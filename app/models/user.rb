@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :calories
   NUMBER_GOSIC = /\A[0-9０−９]+\z/.freeze
   with_options presence: true do
     validates :name
