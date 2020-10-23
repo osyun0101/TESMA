@@ -4,13 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  NUMBER_GOSIC = /\A[0-9０−９]+\z/.freeze
   with_options presence: true do
     validates :name
-    validates :first_name
-    validates :first_name_kana
-    validates :last_name
-    validates :last_name_kana
-    validates :phone_number
+    validates :phone_number, format:{ with: NUMBER_GOSIC }, length: { maximum: 11 }
     validates :birth_date
   end
+  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
+  validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字の両方を含めて設定してください'
 end
