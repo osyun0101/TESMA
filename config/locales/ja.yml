@@ -2,4 +2,4 @@ ja:
  activerecord:
    attributes:
      user:
-      
+      email: Eメール
