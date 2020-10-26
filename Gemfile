@@ -64,3 +64,12 @@ gem 'rails-i18n'
 group :production do
   gem 'rails_12factor'
 end
+
+gem 'jquery-rails'
+
+gem 'jquery-ui-rails'
+
+gem 'bootstrap4-datetime-picker-rails'
+gem 'momentjs-rails'
+
+gem 'font-awesome-rails'

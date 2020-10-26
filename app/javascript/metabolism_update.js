@@ -1,5 +1,8 @@
 document.addEventListener('turbolinks:load', function(){
   const submit = document.getElementById('submit-meta');
+  if (submit == null ){
+    return null
+  }
   submit.addEventListener('click', function(e){
     const stature = document.getElementById('stature').value;
     const weight = document.getElementById('weight').value;

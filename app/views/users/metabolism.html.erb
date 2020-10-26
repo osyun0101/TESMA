@@ -11,7 +11,7 @@
   <%=form_with class: "metabo-form",url: metabolism_update_users_path, local: true do |f|%>
     <div>
       <p>現在の基礎代謝量</p>
-      <p><%="#{current_user.metabolism}kcal" %></p>
+      <p id="kcal-num"><%="#{current_user.metabolism}kcal" %></p>
     </div>
     <div>
       <p>ーー身長、体重、年齢に変化があれば、下記に入力することで基礎代謝量が更新されますーー</p>

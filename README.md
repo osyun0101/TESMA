@@ -61,8 +61,9 @@ Things you may want to cover:
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| target   | integer | null: false |
-| span_date | integer | null: false |
+| weight   | string | null: false |
+| intensity   | integer | null: false |
+| span_date | string | null: false |
 | span_id   | integer | null: false |
 | user     | references | null: false , foreign_key: true|
 

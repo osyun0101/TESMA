@@ -1,0 +1,40 @@
+<%=render "shared/header"%>
+<div class="header-height content-color">
+  <div class="target-content">
+    <div class="target-box">
+      <div>
+      <p id="target-num">目標設定</p>
+      <p>ーー基礎代謝量より食事による摂取カロリーが下回る目標の場合は設定できません。ーー</p>
+      </div>
+      <%=form_with class: "target-form",local: true do |f|%>
+        <div>
+          <p>目標体重(kg)</p>
+          <%=f.text_field :weight%>
+        </div>
+        <div class="target-span">
+            <p>目標期間</p>
+          <div id="target-day">
+          <%=f.text_field :span_date, id: "date", class: "result"%>
+           </div>
+        </div>
+        <div>
+          <p>生活強度指数</p>
+          <div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <%=f.submit "目標設定"%>
+        </div>
+      <% end%>
+    </div>
+  </div>
+<%=render "shared/footer"%>
+</div>

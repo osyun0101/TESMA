@@ -101,6 +101,11 @@
   margin-bottom: 10px;
 }
 
+#kcal-num {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 #update-meta {
   margin-top: 30px;
 }
@@ -121,3 +126,45 @@
   width: 40px;
   cursor: pointer;
 }
+
+/*--------------------------------目標設定-------------------------------*/
+
+.target-content {
+  height: 100%;
+}
+
+.target-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+#target-num {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.target-form {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.target-form p{
+  font-size: 20px;
+}
+
+.target-span {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.target-span ul{
+  margin-right: 10px;
+}
+
+#target-day {
+  display: flex;
+  justify-content: center;
+}
+
+
