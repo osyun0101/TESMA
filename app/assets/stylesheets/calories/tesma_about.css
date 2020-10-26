@@ -1,6 +1,6 @@
 .tesma-about-content {
   display: flex;
-  height: calc(100vh - 301px);
+  height: 100%;
 }
 
 .about-lists {

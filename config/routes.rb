@@ -6,5 +6,10 @@ Rails.application.routes.draw do
       get 'tesma_about'
     end
   end
-  resources :metabolisms, only: [:new]
+  resources :users do
+    collection do
+      get 'metabolism'
+      post 'metabolism_update'
+    end
+  end
 end

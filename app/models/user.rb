@@ -15,9 +15,10 @@ class User < ApplicationRecord
     validates :phone_number, format:{ with: NUMBER_GOSIC }, length: { maximum: 11 }
     validates :sex
     validates :age,:stature,:weight, format:{ with: NUMBER_WEIGHT }
+    validates :metabolism, format:{ with: NUMBER_GOSIC }
   end
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
-  validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字の両方を含めて設定してください'
+  validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字の両方を含めて設定してください', on: :create
 
   validates :sex_id, numericality: { other_than: 1, message: 'を選択してください'}
 end

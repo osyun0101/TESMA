@@ -13,6 +13,8 @@ require("../click_basal")
 require("../select_food")
 require("../click_change_meat")
 require("../calory_math")
+require("../metabolism_math")
+require("../metabolism_update")
 
 
 

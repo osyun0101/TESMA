@@ -46,13 +46,18 @@
   </div>
 
   <div class="field">
-    <p>身長</p>
+    <p>身長(cm)</p>
     <%=f.text_field :stature, placeholder: "半角数字で入力してください"%>
   </div>
 
   <div class="field">
-    <p>体重</p>
+    <p>体重(kg)</p>
     <%=f.text_field :weight, placeholder: "半角数字で入力してください" %>
+  </div>
+
+  <div class="field">
+    <p>基礎代謝量(kcal)</p>
+    <%=f.text_field :metabolism, placeholder: "上記の情報から自動で入力されます" %>
   </div>
 
   <div class='register-btn'>

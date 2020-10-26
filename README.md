@@ -34,16 +34,16 @@ Things you may want to cover:
 | email    | string | null: false |
 | password | string | null: false |
 | phone_number| string | null: false |
-| age       | integer | null: false |
-| stature   | integer | null: false |
-| weight   | integer | null: false |
+| age       | string | null: false |
+| stature   | string | null: false |
+| weight   | string | null: false |
 | sex_id   | integer | null: false |
+| metabolism   | string | null: false |
 
 ### Association
 
 - has_many :calories
 - has_one :target
-- has_one :metabolism
 
 ## calories テーブル
 
@@ -64,18 +64,6 @@ Things you may want to cover:
 | target   | integer | null: false |
 | span_date | integer | null: false |
 | span_id   | integer | null: false |
-| user     | references | null: false , foreign_key: true|
-
-
-### Association
-
-- belongs_to :user
-
-## metabolism テーブル
-
-| Column   | Type   | Options     |
-| -------- | ------ | ----------- |
-| metabolism   | integer | null: false |
 | user     | references | null: false , foreign_key: true|
 
 

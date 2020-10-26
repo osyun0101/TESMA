@@ -1,0 +1,35 @@
+<%=render "shared/header"%>
+
+<div class="header-height content-color">
+  <% if flash[:notice]%> 
+  <div id="flash-bar">
+  <p><%=flash[:notice]%></p>
+  </div>
+  <% end %>
+ <div class="metabo-content">
+   <p class="metabo-title">基礎代謝管理</p>
+  <%=form_with class: "metabo-form",url: metabolism_update_users_path, local: true do |f|%>
+    <div>
+      <p>現在の基礎代謝量</p>
+      <p><%="#{current_user.metabolism}kcal" %></p>
+    </div>
+    <div>
+      <p>ーー身長、体重、年齢に変化があれば、下記に入力することで基礎代謝量が更新されますーー</p>
+    </div>
+    <div>
+      <div>
+        <ul id="update-meta" data-sex=<%=current_user.sex_id%>>
+          <li>身長(cm)</li>
+          <li class="field-meta"><%=f.text_field :stature,value: current_user.stature, class: "value-text"%></li>
+          <li>体重(kg)</li>
+          <li class="field-meta"><%=f.text_field :weight,value: current_user.weight, class: "value-text" %></li>
+          <li>年齢</li>
+          <li class="field-meta"><%=f.text_field :age,value: current_user.age, class: "value-text" %></li>
+        </ul>
+      </div>
+      <%=f.submit "更新", id: "submit-meta"%>
+    </div>
+  <% end %>
+</div>
+<%=render "shared/footer"%>
+</div>

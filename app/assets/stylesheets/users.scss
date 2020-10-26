@@ -45,3 +45,79 @@
   background-color: #ffdbc9;
   height: calc(100% - 152px);
 }
+
+/*--------metabolismアクション----------------------------*/
+
+#flash-bar{
+  position: fixed;
+  top: 170px;
+  width: 100%;
+  background-color: aquamarine;
+  animation-name: fadeout;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+}
+
+#flash-bar p{
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333333;
+  animation-name: fadeout;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeout {
+  100% {
+    color: rgba(0,0,0,0);
+    background-color: rgba(127,255,212,0);
+  }
+}
+
+
+.metabo-content {
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.metabo-title {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.metabo-form {
+  height: 100%;
+  text-align: center;
+}
+
+.metabo-form p{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#update-meta {
+  margin-top: 30px;
+}
+
+#update-meta li{
+  font-size: 20px;
+}
+
+.field-meta {
+  margin-bottom: 20px;
+}
+
+.value-text {
+  text-align: center;
+}
+
+#submit-meta {
+  width: 40px;
+  cursor: pointer;
+}
