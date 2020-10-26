@@ -33,8 +33,11 @@ Things you may want to cover:
 | name     | string | null: false |
 | email    | string | null: false |
 | password | string | null: false |
-| birth_date| date | null: false |
 | phone_number| string | null: false |
+| age       | integer | null: false |
+| stature   | integer | null: false |
+| weight   | integer | null: false |
+| sex_id   | integer | null: false |
 
 ### Association
 
@@ -73,8 +76,6 @@ Things you may want to cover:
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
 | metabolism   | integer | null: false |
-| stature   | integer | null: false |
-| weight   | integer | null: false |
 | user     | references | null: false , foreign_key: true|
 
 

@@ -6,4 +6,5 @@ Rails.application.routes.draw do
       get 'tesma_about'
     end
   end
+  resources :metabolisms, only: [:new]
 end

@@ -1,0 +1,2 @@
+module MetabolismsHelper
+end
