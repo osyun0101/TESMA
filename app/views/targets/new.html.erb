@@ -1,5 +1,5 @@
 <%=render "shared/header"%>
-<div class="header-height content-color">
+<div class="target-life-content">
   <div class="target-content">
     <div class="target-box">
       <div>
@@ -8,33 +8,134 @@
       </div>
       <%=form_with class: "target-form",local: true do |f|%>
         <div>
-          <p>目標体重(kg)</p>
-          <%=f.text_field :weight%>
+          <p class="target-title-bold">目標体重(kg)</p>
+          <%=f.text_field :weight ,class: "field-center"%>
         </div>
         <div class="target-span">
-            <p>目標期間</p>
+            <p class="target-title-bold">目標期間</p>
           <div id="target-day">
-          <%=f.text_field :span_date, id: "date", class: "result"%>
+          <%=f.text_field :span_date, id: "date", class: "result field-center"%>
            </div>
         </div>
-        <div>
-          <p>生活強度指数</p>
-          <div>
-            <div>
-            </div>
-            <div>
-            </div>
-            <div>
-            </div>
-            <div>
-            </div>
+        <div class="intensity-block">
+          <p class="target-title-bold">生活強度指数</p>
+          <p>生活強度指数とは、1日の生活のなかでどのくらいの負荷がかかっているかの数値です。一日あたりの摂取カロリーを算出するのに利用します。</p>
+          <p>ーー<span class="font-mix">「日常生活の内容」「生活動作」「生活動作時間」</span>を確認し、自身に該当するものを選択してくださいーー</p>
+          <div class="life-num">
+          <p>記述区分）</p>
+          <div class="intensity-box">
+            <p class="ex-life-content ex-content-color">日常生活の内容</p>
+            <p class="ex-life-move">生活動作</p>
+            <p class="ex-time">生活動作時間(~時間)</p>
+            <p class="ex-num">生活強度指数</p>
           </div>
+          </div>
+
+          <div class="select-intensity">
+            <div class="select-life-num">
+              <p class="every-life ex-content-color">散歩、買物など比較的ゆっくりした１時間程度の歩行のほか大部分は座位での読書、勉強、談話、また座位や横になってのテレビ、音楽鑑賞などをしている場合。</p>
+              <ul class="ex-mouving ex-life-move">
+                <li>安静</li>
+                <li>立つ</li>
+                <li>歩く</li>
+                <li>速歩</li>
+                <li class="right-border">筋運動</li>
+              </ul>
+              <ul class="ex-mouving ex-time">
+                <li>12</li>
+                <li>11</li>
+                <li>1</li>
+                <li>0</li>
+                <li class="right-border">0</li>
+              </ul>
+              <p class="intensity-num ex-num">1.3（低い）</p>
+              <div class="button-p">
+                <li id="intensity-button1"></li>
+              </div>
+            </div>
+
+            <div class="select-life-num">
+              <p class="every-life ex-content-color">通勤、仕事などで２時間程度の歩行や乗車接客、家事等立位での業務が比較的多いほか大部分は座位での事務、談話などをしている場合。</p>
+              <ul class="ex-mouving ex-life-move">
+                <li>安静</li>
+                <li>立つ</li>
+                <li>歩く</li>
+                <li>速歩</li>
+                <li>筋運動</li>
+              </ul>
+              <ul class="ex-mouving ex-time">
+                <li>10</li>
+                <li>9</li>
+                <li>5</li>
+                <li>0</li>
+                <li>0</li>
+              </ul>
+              <p class="intensity-num ex-num">1.5（やや低い）</p>
+              <div class="button-p">
+                <li id="intensity-button2"></li>
+              </div>
+            </div>
+
+            <div class="select-life-num">
+              <p class="every-life ex-content-color">生活強度指数(1.5)の者が１日１時間程度は速歩やサイクリングなど比較的強い身体活動を行っている場合や、大部分は立位での作業であるが１時間程度は農作業、漁業などの比較的強い作業に従事している場合。</p>
+              <ul class="ex-mouving ex-life-move">
+                <li>安静</li>
+                <li>立つ</li>
+                <li>歩く</li>
+                <li>速歩</li>
+                <li>筋運動</li>
+              </ul>
+              <ul class="ex-mouving ex-time">
+                <li>9</li>
+                <li>8</li>
+                <li>6</li>
+                <li>1</li>
+                <li>0</li>
+              </ul>
+              <p class="intensity-num ex-num">1.7（適度）</p>
+              <div class="button-p">
+                <li id="intensity-button3"></li>
+              </div>
+            </div>
+
+           <div class="select-life-num">
+              <p class="every-life ex-content-color">１日のうち１時間程度は激しいトレーニングや木材の運搬、農繁期の農耕作業などのような強い作業に従事している場合。</p>
+              <ul class="ex-mouving ex-life-move">
+                <li>安静</li>
+                <li>立つ</li>
+                <li>歩く</li>
+                <li>速歩</li>
+                <li>筋運動</li>
+              </ul>
+              <ul class="ex-mouving ex-time">
+                <li>9</li>
+                <li>8</li>
+                <li>5</li>
+                <li>1</li>
+                <li>1</li>
+              </ul>
+              <p class="intensity-num ex-num">1.9（高い）</p>
+              <div class="button-p">
+                <li id="intensity-button4"></li>
+              </div>
+            </div>
+           </div>
         </div>
-        <div>
-          <%=f.submit "目標設定"%>
+         <div>
+          <%=f.submit "目標設定", class: "target-submit"%>
         </div>
       <% end%>
     </div>
   </div>
 <%=render "shared/footer"%>
 </div>
+<script>
+  $(function(){
+    $("#date").bootstrapMaterialDatePicker({
+      weekStart:0,
+      lang:"ja",
+      time: false,
+      format:"YYYY-MM-DD"
+    });
+  });
+</script>

@@ -63,8 +63,8 @@ Things you may want to cover:
 | -------- | ------ | ----------- |
 | weight   | string | null: false |
 | intensity   | integer | null: false |
-| span_date | string | null: false |
-| span_id   | integer | null: false |
+| intake   | string | null: false |
+| span_date | date | null: false |
 | user     | references | null: false , foreign_key: true|
 
 

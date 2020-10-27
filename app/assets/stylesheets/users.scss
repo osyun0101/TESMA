@@ -129,8 +129,11 @@
 
 /*--------------------------------目標設定-------------------------------*/
 
-.target-content {
-  height: 100%;
+.target-life-content {
+  position: absolute;
+  top: 170px;
+  width: 100%;
+  background-color: rgba(255, 219, 201,0.3);
 }
 
 .target-box {
@@ -153,6 +156,10 @@
   font-size: 20px;
 }
 
+.field-center {
+  text-align: center;
+}
+
 .target-span {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -167,4 +174,122 @@
   justify-content: center;
 }
 
+.intensity-block {
+  margin-bottom: 30px;
+}
+
+.target-title-bold {
+  font-weight: bold;
+}
+
+.intensity-box {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  margin-left: 10px;
+  width: 200px;
+}
+
+.intensity-box p{
+  border-bottom: 1px solid black;
+}
+
+.font-mix {
+  color: red;
+}
+
+.life-num {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ex-life-content {
+  line-height: 100px;
+}
+
+.ex-content-color {
+  background-color: #33CCFF;
+}
+
+.ex-life-move {
+  background-color: #33CC99;
+}
+
+.ex-time {
+  background-color: #FFFF99;
+}
+
+.ex-num {
+  background-color: #FF6666;
+}
+
+.select-intensity {
+  display: flex;
+  justify-content: space-between;
+}
+
+.select-life-num {
+  width: 23%;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.button-p {
+  border-left: 1px solid black;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-p li{
+  list-style: none;
+  border: 1px solid #777777;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.button-p li:hover {
+  background-color: #666666;
+}
+
+.select-life-num p{
+  font-size: 18px;
+  border-left: 1px solid black;
+}
+
+.every-life {
+  height: 250px;
+
+}
+
+.ex-mouving {
+  display: flex;
+  border-top: 1px solid black;
+}
+
+.ex-mouving li{
+  width: 20%;
+  border-left: 1px solid black;
+}
+
+.right-border {
+  border-right: none;
+}
+
+.intensity-num {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.target-submit {
+  margin-bottom: 30px;
+  cursor: pointer;
+}
 
