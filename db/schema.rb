@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_26_024336) do
+ActiveRecord::Schema.define(version: 2020_10_27_071621) do
 
   create_table "calories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "calory", null: false
@@ -18,6 +18,17 @@ ActiveRecord::Schema.define(version: 2020_10_26_024336) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_calories_on_user_id"
+  end
+
+  create_table "targets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "weight", null: false
+    t.string "intensity", null: false
+    t.string "intake", null: false
+    t.date "date", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_targets_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -40,4 +51,5 @@ ActiveRecord::Schema.define(version: 2020_10_26_024336) do
   end
 
   add_foreign_key "calories", "users"
+  add_foreign_key "targets", "users"
 end

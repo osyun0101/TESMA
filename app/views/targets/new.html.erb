@@ -6,7 +6,10 @@
       <p id="target-num">目標設定</p>
       <p>ーー基礎代謝量より食事による摂取カロリーが下回る目標の場合は設定できません。ーー</p>
       </div>
-      <%=form_with class: "target-form",local: true do |f|%>
+      <%=form_with model: @target, class: "target-form",local: true do |f|%>
+       <div class="errors-color-red">
+        <%= render "shared/error_messages", model: f.object %>
+        </div>
         <div>
           <p class="target-title-bold">目標体重(kg)</p>
           <%=f.text_field :weight ,class: "field-center"%>
@@ -14,7 +17,7 @@
         <div class="target-span">
             <p class="target-title-bold">目標期間</p>
           <div id="target-day">
-          <%=f.text_field :span_date, id: "date", class: "result field-center"%>
+          <%=f.date_field :date, id: "date", class: "result field-center"%>
            </div>
         </div>
         <div class="intensity-block">
@@ -121,6 +124,17 @@
             </div>
            </div>
         </div>
+        <div>
+          <p>1日当たり摂取カロリー（上記の情報を元に自動で算出します）</p>
+          <p>ーー基礎代謝量より摂取カロリーが少なければ保存することができませんーー</p>
+          <p>＊保存可能</p>
+          <ul>
+            <li>現在の基礎代謝量</li>
+            <li id="user-metabo" data-weight=<%=current_user.weight%>><%= current_user.metabolism%></li>
+            <li>1日当たりの摂取カロリー</li>
+            <li></li>
+          </ul>
+        </div>
          <div>
           <%=f.submit "目標設定", class: "target-submit"%>
         </div>
@@ -137,5 +151,7 @@
       time: false,
       format:"YYYY-MM-DD"
     });
+
+    $(".dtp-btn-ok").attr('id', 'span-button');
   });
 </script>

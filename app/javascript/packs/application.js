@@ -16,6 +16,7 @@ require("../calory_math")
 require("../metabolism_math")
 require("../metabolism_update")
 require("../intensity_click")
+require("../intake_math")
 
 
 
