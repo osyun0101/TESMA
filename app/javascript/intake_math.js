@@ -1,4 +1,4 @@
-document,addEventListener('turbolinks:load', function(){
+document.addEventListener('turbolinks:load', function(){
   const tWeight = document.getElementById('target_weight');
   const tSpan = document.getElementById('date');
   const spanButton = document.getElementById('span-button');
@@ -6,18 +6,25 @@ document,addEventListener('turbolinks:load', function(){
   const intensity2 = document.getElementById('intensity-button2');
   const intensity3 = document.getElementById('intensity-button3');
   const intensity4 = document.getElementById('intensity-button4');
-
+  const userMetabo = document.getElementById('user-metabo');
+  const metabolism = userMetabo.innerText;
+  const uWeight = userMetabo.dataset.weight
+ 
+  
   const dateObject = new Date();
   const today = new Date(dateObject.getFullYear()+"/"+(dateObject.getMonth()+1)+"/"+ dateObject.getDate()) 
   let weightNum = 0
   let spanNum = 0
   let intensityNum = 0
+  let weight = 0
   tWeight.addEventListener('input', function(){
     weightNum = tWeight.value
     if (weightNum != 0 && spanNum != 0 && intensityNum != 0){
+      weight = uweight - weightNum
+      console.log(weight);
       spanArray = spanNum.split('-')
       let spanDate = new Date(spanArray[0],spanArray[1]-1,spanArray[2]);
-      console.log((spanDate - today) / 86400000);
+      let span = (spanDate - today) / 86400000
     }
   });
 
@@ -46,9 +53,8 @@ document,addEventListener('turbolinks:load', function(){
   
 
   const tIntensity = document.getElementById('intensity-id');
-  const userMetabo = document.getElementById('user-metabo');
-  const metabolism = userMetabo.innerText;
-  console.log(metabolism);
-  const uWeight = userMetabo.dataset.weight
-  console.log(uWeight);
+
+
+
+
 });
