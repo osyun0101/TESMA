@@ -12,5 +12,5 @@ Rails.application.routes.draw do
       post 'metabolism_update'
     end
   end
-  resources :targets, only: [:new,:create] 
+  resources :targets, only: [:new,:create,:update] 
 end

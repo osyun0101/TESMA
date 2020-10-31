@@ -36,7 +36,7 @@
              <p class="food-title">牛肉</p>
              <ul class="food-weight">
 
-             <% @meat_data.each do |menu|%>
+             <% MenuDatum.all.each do |menu|%>
               <div class="food-flex">
              <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
              <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -53,7 +53,7 @@
             <p class="food-title">豚肉</p>
              <ul class="food-weight">
              
-             <% @pig_data.each do |menu|%>
+             <% Pig.all.each do |menu|%>
               <div class="food-flex">
              <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
              <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -70,7 +70,7 @@
              <div id="bird-content">
             <p class="food-title">鶏肉</p>
              <ul class="food-weight">
-             <% @bird_data.each do |menu|%>
+             <% Bird.all.each do |menu|%>
               <div class="food-flex">
              <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
              <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -87,7 +87,7 @@
             <p class="food-title">卵</p>
             <p class="small-p">--黄身と卵白は卵一個あたりに含まれるそれぞれのカロリー数で計算します--</p>
              <ul class="food-weight">
-             <% @egg_data.each do |menu|%>
+             <% Egg.all.each do |menu|%>
               <div class="food-flex">
              <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
              <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>個
@@ -114,7 +114,7 @@
             <div id="fish-content">
             <p class="food-title">魚</p>
              <ul class="food-weight">
-             <% @fish_data.each do |menu|%>
+             <% Fish.all.each do |menu|%>
               <div class="food-flex">
              <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
              <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -130,7 +130,7 @@
             <div id="shellfish-content">
             <p class="food-title">貝</p>
              <ul class="food-weight">
-             <% @shell_fish_data.each do |menu|%>
+             <% ShellFish.all.each do |menu|%>
               <div class="food-flex">
              <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
              <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -146,7 +146,7 @@
             <div id="seafood-content">
             <p class="food-title">エビ、カニ、イカ、タコ</p>
              <ul class="food-weight">
-             <% @seafood_data.each do |menu|%>
+             <% Seafood.all.each do |menu|%>
               <div class="food-flex">
              <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
              <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -162,7 +162,7 @@
             <div id="paste-content">
             <p class="food-title">水産練り物</p>
              <ul class="food-weight">
-             <% @paste_data.each do |menu|%>
+             <% Paste.all.each do |menu|%>
               <div class="food-flex">
              <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
              <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -178,7 +178,7 @@
             <div id="fish-egg-content">
             <p class="food-title">魚卵</p>
              <ul class="food-weight">
-             <% @fish_egg_data.each do |menu|%>
+             <% FishEgg.all.each do |menu|%>
               <div class="food-flex">
              <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
              <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -194,7 +194,7 @@
             <div id="seaweed-content">
             <p class="food-title">藻、海藻</p>
              <ul class="food-weight">
-             <% @seaweed_data.each do |menu|%>
+             <% Seaweed.all.each do |menu|%>
               <div class="food-flex">
              <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
              <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -211,7 +211,7 @@
             <p class="food-title">米、餅、パン</p>
             <p class="small-p">--目安（ご飯は茶碗に小盛りで120g、普通盛りで150g、大盛りで200g）--</p>
              <ul class="food-weight">
-              <% @rice_data.each do |menu|%>
+              <% Rice.all.each do |menu|%>
               <div class="food-flex">
                 <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
                  <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -227,7 +227,7 @@
             <div id="vegetable-content">
             <p class="food-title">野菜</p>
              <ul class="food-weight">
-              <% @vegetable_data.each do |menu|%>
+              <% Vegetable.all.each do |menu|%>
               <div class="food-flex">
                 <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
                  <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -244,7 +244,7 @@
             <div id="noodle-content">
             <p class="food-title">麺類</p>
              <ul class="food-weight">
-              <% @noodle_data.each do |menu|%>
+              <% Noodle.all.each do |menu|%>
               <div class="food-flex">
                 <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
                  <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -260,7 +260,7 @@
             <div id="bean-content">
             <p class="food-title">豆類</p>
              <ul class="food-weight">
-             <% @bean_data.each do |menu|%>  
+             <% Bean.all.each do |menu|%>  
               <div class="food-flex">
                 <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
                  <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -276,7 +276,7 @@
             <div id="nut-content">
             <p class="food-title">種実</p>
              <ul class="food-weight">
-             <% @nut_data.each do |menu|%>  
+             <% Nut.all.each do |menu|%>  
               <div class="food-flex">
                 <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
                  <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -292,7 +292,7 @@
             <div id="potato-content">
             <p class="food-title">いも</p>
              <ul class="food-weight">
-             <% @potato_data.each do |menu|%>  
+             <% Potato.all.each do |menu|%>  
               <div class="food-flex">
                 <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
                  <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -308,7 +308,7 @@
             <div id="fruit-content">
             <p class="food-title">果物</p>
              <ul class="food-weight">
-             <% @fruit_data.each do |menu|%>  
+             <% Fruit.all.each do |menu|%>  
               <div class="food-flex">
                 <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
                  <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -324,7 +324,7 @@
             <div id="mushroom-content">
             <p class="food-title">きのこ</p>
              <ul class="food-weight">
-             <% @mushroom_data.each do |menu|%>  
+             <% Mushroom.all.each do |menu|%>  
               <div class="food-flex">
                 <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
                  <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -340,7 +340,7 @@
             <div id="milk-content">
             <p class="food-title">乳製品</p>
              <ul class="food-weight">
-             <% @milk_data.each do |menu|%>  
+             <% Milk.all.each do |menu|%>  
               <div class="food-flex">
                 <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
                  <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g
@@ -358,7 +358,7 @@
             <p class="small-p">--油は、どの種類でもカロリーはほとんど変わらないため一律で計算します--</p>
             <p class="small-p">--大さじ、小さじの部分には使用した杯数を入力してください--</p>
              <ul class="food-weight">
-             <% @oil_data.each_with_index do |menu, i|%>  
+             <% Oil.all.each_with_index do |menu, i|%>  
               <div class="food-flex">
                 <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
                 <% if i == 0 %>
@@ -379,7 +379,7 @@
             <p class="food-title">調味料</p>
             <p class="small-p">--塩のカロリーは0であるため表示していません--</p>
              <ul class="food-weight">
-             <% @seasoning_data.each do |menu|%>  
+             <% Seasoning.all.each do |menu|%>  
               <div class="food-flex">
                 <li id="menu-name-<%=menu.id%>"><%= menu.name %></li>
                  <%=f.number_field :"menu#{menu.id}", class: "menu-name"%>g

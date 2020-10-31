@@ -7,20 +7,27 @@
       <p>ーー基礎代謝量より食事による摂取カロリーが下回る目標の場合は設定できません。ーー</p>
       </div>
       <%=form_with model: @target, class: "target-form",local: true do |f|%>
-       <div class="errors-color-red">
+        <div class="errors-color-red">
         <%= render "shared/error_messages", model: f.object %>
         </div>
         <div>
           <p class="target-title-bold">目標体重(kg)</p>
-          <%=f.text_field :weight ,class: "field-center"%>
+          <p id="red-font">*半角数字で入力してください</p>
+          <%=f.text_field :weight ,class: "field-center", value: @target.weight%>
         </div>
         <div class="target-span">
             <p class="target-title-bold">目標期間</p>
           <div id="target-day">
           <%=f.date_field :date, id: "date", class: "result field-center"%>
-           </div>
+          </div>
         </div>
         <div class="intensity-block">
+        <% if @target.intensity != nil%>
+          <p id="target-intensity-data" data-intensity=<%= @target.intensity%>></p>
+        <%end%>
+        <% if @target.intake != nil%>
+          <p id="target-intake-data" data-intake=<%= @target.intake%>></p>
+        <%end%>
           <p class="target-title-bold">生活強度指数</p>
           <p>生活強度指数とは、1日の生活のなかでどのくらいの負荷がかかっているかの数値です。一日あたりの摂取カロリーを算出するのに利用します。</p>
           <p>ーー<span class="font-mix">「日常生活の内容」「生活動作」「生活動作時間」</span>を確認し、自身に該当するものを選択してくださいーー</p>
@@ -127,12 +134,16 @@
         <div>
           <p>1日当たり摂取カロリー（上記の情報を元に自動で算出します）</p>
           <p>ーー基礎代謝量より摂取カロリーが少なければ保存することができませんーー</p>
-          <p>＊保存可能</p>
-          <ul>
+          <p id="save-true">＊保存可能です</p>
+          <p id="save-not">＊保存できません
+          <br>
+          ーー摂取カロリーが下回っています。目標期間を設定し直してください。ーー
+          </p>
+          <ul class="self-user-content">
             <li>現在の基礎代謝量</li>
             <li id="user-metabo" data-weight=<%=current_user.weight%>><%= current_user.metabolism%></li>
             <li>1日当たりの摂取カロリー</li>
-            <li></li>
+            <li id="intake-num">0</li>
           </ul>
         </div>
          <div>

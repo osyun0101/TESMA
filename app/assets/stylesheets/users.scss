@@ -182,8 +182,20 @@
   margin-bottom: 30px;
 }
 
+#target-intensity-data {
+  display: none;
+}
+
+#target-intake-data {
+  display: none;
+}
+
 .target-title-bold {
   font-weight: bold;
+}
+
+#red-font {
+  font-size: 16px;
 }
 
 .intensity-box {
@@ -199,7 +211,7 @@
 }
 
 .font-mix {
-  color: red;
+  font-weight: bold;
 }
 
 .life-num {
@@ -290,6 +302,31 @@
 .intensity-num {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+}
+
+#save-true {
+  color: #00CC00;
+  display: none;
+}
+
+#save-not {
+  color: red;
+  display: none;
+}
+
+.self-user-content {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.self-user-content li{
+  font-size: 20px;
+}
+
+#intake-num {
+  height: 30px;
 }
 
 .target-submit {

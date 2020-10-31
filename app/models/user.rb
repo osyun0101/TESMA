@@ -6,8 +6,9 @@ class User < ApplicationRecord
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :sex
-
   has_many :calories
+  has_one :target
+
   NUMBER_GOSIC = /\A[0-9]+\z/.freeze
   NUMBER_WEIGHT = /\A[0-9]+(\.[0-9]+)?\z/.freeze
   with_options presence: true do
