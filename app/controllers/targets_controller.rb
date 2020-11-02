@@ -1,4 +1,5 @@
 class TargetsController < ApplicationController
+  before_action :user_session, only: [:new,:index]
 
   def index
   end
@@ -61,5 +62,11 @@ class TargetsController < ApplicationController
 
   def params_target
     params.require(:target).permit(:weight, :date).merge(params.permit(:intensity,:intake)).merge(user_id: current_user.id)
+  end
+
+  def user_session
+    unless user_signed_in?
+      redirect_to new_user_session_path
+     end
   end
 end

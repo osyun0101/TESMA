@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_02_082616) do
+ActiveRecord::Schema.define(version: 2020_11_02_083217) do
 
   create_table "calories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "calory", null: false
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_11_02_082616) do
     t.string "stature", null: false
     t.string "weight", null: false
     t.integer "sex_id", null: false
+    t.string "metabolism", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
