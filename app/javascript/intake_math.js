@@ -129,24 +129,23 @@ document.addEventListener('turbolinks:load', function(){
     //ユーザーの体重と目標体重の差分計算
     const strWeight = uWeight+"-"+weightNum
     const MathWeight = evalCalculation(strWeight);
-    console.log(MathWeight);
     //目標期間から今日の日付との差分計算
     spanArray = spanNum.split('-')
     const spanDate = new Date(spanArray[0],spanArray[1]-1,spanArray[2]);
     const span = ((spanDate - today) / 86400000)+1
-    console.log(span);
+
 
     //体重の差分に7000をかけ、燃焼するカロリーの合計を計算
     const totalKcal = evalCalculation(`${MathWeight}*7000/${span}`);
-    console.log(totalKcal);
+
 
     //1日の消費カロリー計算
     const combustion = evalCalculation(`${metabolism}*${intensityNum}`)
-    console.log(combustion);
+
 
     //1日の摂取カロリー計算
     const intake = Math.floor(evalCalculation(`${combustion}-${totalKcal}`));
-    console.log(intake);
+
 
       const intakeParams = document.getElementById('intake-field-num');
       if (intakeParams != null){

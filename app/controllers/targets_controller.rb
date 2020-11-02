@@ -1,5 +1,8 @@
 class TargetsController < ApplicationController
 
+  def index
+  end
+
   def new
     if current_user.target
       @target = Target.find(current_user.target.id)
