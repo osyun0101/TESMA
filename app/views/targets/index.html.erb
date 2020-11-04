@@ -1,31 +1,58 @@
 <%=render 'shared/header'%>
 
-<div class="header-height content-color">
+<div class="header-height content-color" id="progress-height">
 <div>
-  <div>
-    <div>
+  <div class="index-width">
+    <div class="target-index-content">
       <ul>
-      <li>目標進捗</li>
-      <li>1日当たりの目標摂取カロリー</li>
-      <li>（目標摂取カロリー表示）</li>
+      <li id="index-title">目標進捗</li>
+      <li class="target-view">1日当たりの目標摂取カロリー</li>
+      <li id="data-intake" data-intake=<%=current_user.target.intake%>><%=current_user.target.intake%>kcal</li>
+      <li class="target-view">目標体重</li>
+      <li><%=current_user.target.weight%>kg</li>
       </ul>
-      <ul>
+      <ul class="user-index">
+        <div>
         <li>身長</li>
+        <li><%= current_user.stature%>cm</li>
+        </div>
+        <div>
         <li>体重</li>
+        <li><%=current_user.weight %>kg</li>
+        <li></li>
+        </div>
+        <div>
         <li>基礎代謝量</li>
+        <li><%=current_user.metabolism %>kcal</li>
+        </div>
+        <div>
         <li>生活強度指数</li>
+        <li><%= current_user.target.intensity %></li>
+        </div>
       </ul>
     </div>
-    <div>
-    <p>（目標期間に（摂取カロリーの平均値から割り出す）kgになります）</p>
-      <div>
-        <div>
-        </div>
-        <div>
-        </div>
+    <div class="progress-chart-container">
+      <p class="progress-title">進捗： <%=current_user.target.date%>に〜kgになります</p>
+      <div class="border-chart">
+        <ul class="border-ul">
+        <li class="border-color-red"></li>
+        <li>摂取カロリー(kcal)</li>
+        </ul>
+        <ul class="border-ul">
+        <li class="border-color-blue"></li>
+        <li>目標摂取カロリー(kcal)</li>
+        </ul>
+        <select id="data-option">
+        <option >直近の結果</option>
+        </select>
       </div>
+        <div id="chart-box">
+          <canvas id="myChart"></canvas>
+        </div>
     </div>
   </div>
 </div>
 <%= render 'shared/footer'%>
+</div>
+<div id="data-div" data-today=<%=Date.today %> data-created=<%=current_user.target.created_at%> data-updated=<%=current_user.target.updated_at%>>
 </div>
