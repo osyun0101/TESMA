@@ -50,6 +50,7 @@ Things you may want to cover:
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
 | calory   | integer | null: false |
+| create_date   | date | null: false |
 | user     | references | null: false , foreign_key: true|
 
 

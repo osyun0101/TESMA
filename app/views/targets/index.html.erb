@@ -31,6 +31,7 @@
         </div>
       </ul>
     </div>
+    
     <div class="progress-chart-container">
       <p class="progress-title">進捗： <%=current_user.target.date%>に〜kgになります</p>
       <div class="border-chart">
@@ -43,7 +44,7 @@
         <li>目標摂取カロリー(kcal)</li>
         </ul>
         <select id="data-option">
-        <option >直近の結果</option>
+        <option value="0">直近の結果</option>
         </select>
       </div>
         <div id="chart-box">
@@ -55,4 +56,6 @@
 <%= render 'shared/footer'%>
 </div>
 <div id="data-div" data-today=<%=Date.today %> data-created=<%=current_user.target.created_at%> data-updated=<%=current_user.target.updated_at%>>
+  <div id="intake-kcal" data-kcal="<%=@data%>">
+  </div>
 </div>

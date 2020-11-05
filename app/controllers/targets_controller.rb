@@ -2,6 +2,9 @@ class TargetsController < ApplicationController
   before_action :user_session, only: [:new,:index]
 
   def index
+    calory = Calory.where(user_id: current_user.id)
+    
+    @data = create_array(calory)
   end
 
   def new
@@ -68,5 +71,23 @@ class TargetsController < ApplicationController
     unless user_signed_in?
       redirect_to new_user_session_path
      end
+  end
+
+  def create_array(calory)
+    str = ""
+    kcal = 0
+    calory.each_with_index do |t, i|
+      if calory[i+1] != nil && (t[:create_date] == calory[i+1][:create_date])
+        kcal += t[:calory]
+      else
+        if calory[i+1] == nil
+          str += (t[:create_date].to_s+' '+(t[:calory]+kcal).to_s)
+        else
+          str += (t[:create_date].to_s+' '+(t[:calory]+kcal).to_s+",")
+          kcal = 0
+        end
+      end
+    end
+    return str
   end
 end

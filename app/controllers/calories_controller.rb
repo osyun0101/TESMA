@@ -8,6 +8,14 @@ class CaloriesController < ApplicationController
 
   def create
      @calory = Calory.new(params_calory)
+     date = Date.today
+     date_str = date.to_s
+     if date_str.slice(-2) == "0"
+      date_str.slice!(-2)
+      @calory.create_date = date_str
+     else
+      @calory.create_date = date_str
+     end
      if @calory.save
       redirect_to root_path
      else

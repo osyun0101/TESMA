@@ -10,25 +10,51 @@ document.addEventListener('turbolinks:load', function(){
     const dataUpdated = dataDiv.dataset.updated
     const date = new Date(dataToday)
     const array = []
- 
+    const fullYearArray = []
 
+    //摂取カロリーのデータ取得
+    const kcalString = document.getElementById('intake-kcal').dataset.kcal;
+    const kcalData = kcalString.trim().split(',').map(function(i){
+      return i.trim().replace(/\s+/g,' ').split(' ');
+    });
+    const copyKcalData = kcalData
+    const dateKcal = kcalData.map(function(d){
+       return [new Date(d[0]),d[1]]
+    });
+    
+    //表示する日付の配列作成
     let fullYear = date.getFullYear()
     let count = 0
-   //表示する日付の配列作成
+   
    function ArrayNew(targetDay){
     for(var r = targetDay; r <= date ; r.setDate(r.getDate()+1)) {
       if (fullYear == r.getFullYear()){
       array.push(r.getFullYear()+"-"+(r.getMonth()+1)+"-"+r.getDate());
+      fullYearArray.push(r.getFullYear()+"-"+(r.getMonth()+1)+"-"+r.getDate());
       fullYear += 1
        count += 1
       }
        else {
            array.push((r.getMonth()+1)+"-"+r.getDate());
+           fullYearArray.push(r.getFullYear()+"-"+(r.getMonth()+1)+"-"+r.getDate());
       }
      }
-
+     
      if(array.length > 90){
+       fullYearArray.splice(0,array.length-90)
        array.splice(0,array.length-90)
+       
+       const minDate = new Date(fullYearArray[0])
+       
+       for(const dt of dateKcal){
+         if (minDate <= dt[0]){
+            break
+         }
+         else {
+          copyKcalData.shift()
+         }
+       }
+
      }
     }
     //表示する日付の配列作成
@@ -71,6 +97,24 @@ document.addEventListener('turbolinks:load', function(){
     }
     //select要素に月ごとのデータを選択できるようにoption追加
 
+    const matchArray = []   
+    //摂取カロリーの配列作成の関数
+    function kcalArray(){
+      var fakeData = copyKcalData
+      
+      for(const label of fullYearArray){
+        if(label == fakeData[0][0]){
+          matchArray.push(fakeData[0][1])
+          fakeData = fakeData.slice(1)
+        }
+        else {
+          matchArray.push(0)
+        }
+      }
+    }
+    //摂取カロリーの配列作成の関数
+
+
     //目標設定をした日付取得｜｜更新した日付があればそれを取得
     if(dataCreated == dataUpdated){
       const td = new Date(dataCreated)
@@ -81,7 +125,7 @@ document.addEventListener('turbolinks:load', function(){
     }
     else {
       //const td = new Date(dataUpdated)
-      const td = new Date(2020, 9, 4)
+      const td = new Date(2020, 5, 4)
       const targetDay = new Date(td.getFullYear()+"-"+(td.getMonth()+1)+"-"+td.getDate())
 
       ArrayNew(targetDay)
@@ -89,6 +133,9 @@ document.addEventListener('turbolinks:load', function(){
       }
     //目標設定をした日付取得｜｜更新した日付があればそれを取得
 
+    //摂取カロリーの配列を作成する関数の呼び出し
+    kcalArray()
+ 
     function chartView(){
     // myChartの横幅を動的に変更
     const chartWidth = 125
@@ -120,7 +167,7 @@ document.addEventListener('turbolinks:load', function(){
       labels: array,
       datasets: [
         {
-          data: [],
+          data: matchArray,
           borderColor: "rgba(255,0,0,1)",
           backgroundColor: "rgba(0,0,0,0)",
           lineTension:0,
@@ -165,22 +212,54 @@ document.addEventListener('turbolinks:load', function(){
 
   select.addEventListener('change', function(e){
     const arrayValue= e.target.value.split(',').map(Number);
+    if (arrayValue == 0 ){
+      if (document.getElementById('addChart') != null){
+        document.getElementById('addChart').remove()
+      }
+      ctx.style.display="block"
+    }
+    else {
     const dateSum = new Date(arrayValue[0],arrayValue[1],0).getDate()
     const firstDay = new Date(arrayValue[0],arrayValue[1]-1,1)
     const lastDay = new Date(arrayValue[0], arrayValue[1]-1, dateSum)
-     
+
     const changeArray = []
+    const changeArrayYear = []
     let num = 0
     //表示する日付の配列作成
     for(var r = firstDay; r <= lastDay ; r.setDate(r.getDate()+1)) {
       if (num == 0){
         changeArray.push(r.getFullYear()+"-"+(r.getMonth()+1)+"-"+r.getDate());
+        changeArrayYear.push(r.getFullYear()+"-"+(r.getMonth()+1)+"-"+r.getDate());
        num += 1
       }else {
         changeArray.push((r.getMonth()+1)+"-"+r.getDate());
+        changeArrayYear.push(r.getFullYear()+"-"+(r.getMonth()+1)+"-"+r.getDate());
       }
      }
-     
+   
+     //その月の日付の摂取カロリーのみの配列作成
+     const MonthIntake = []
+     const monthData = kcalData
+  
+     for(const allDay of changeArrayYear){
+      let i = 0
+       for(const md of monthData){
+        if(md[0] == allDay){
+          MonthIntake.push(md[1])
+          break
+        }
+        else {
+          if(i == monthData.length-1){
+            MonthIntake.push(0)  
+          }
+        }
+        i += 1
+       }
+     }
+      
+      //その月の日付の摂取カロリーのみの配列作成
+
      const leng = changeArray.length
      const el = intakeData
      const ar = new Array(leng).fill(el);
@@ -195,7 +274,7 @@ document.addEventListener('turbolinks:load', function(){
       labels: changeArray,
       datasets: [
         {
-          data: [],
+          data: MonthIntake,
           borderColor: "rgba(255,0,0,1)",
           backgroundColor: "rgba(0,0,0,0)",
           lineTension:0,
@@ -240,7 +319,7 @@ document.addEventListener('turbolinks:load', function(){
   }
   ctx.style.display="none";
   chartBox.appendChild(newCanvas);
-     
+   } 
    });
   
 });
