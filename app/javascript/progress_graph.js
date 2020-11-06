@@ -1,7 +1,10 @@
 document.addEventListener('turbolinks:load', function(){
+    const ctx = document.getElementById("myChart");
+    if(ctx == null){
+      return null
+    }
     const intakeData = document.getElementById('data-intake').dataset.intake;
     const intake = intakeData*1.2
-    const ctx = document.getElementById("myChart");
     const select = document.getElementById('data-option');
 
     const dataDiv = document.getElementById('data-div');
@@ -17,7 +20,7 @@ document.addEventListener('turbolinks:load', function(){
     const kcalData = kcalString.trim().split(',').map(function(i){
       return i.trim().replace(/\s+/g,' ').split(' ');
     });
-    const copyKcalData = kcalData
+    
     const dateKcal = kcalData.map(function(d){
        return [new Date(d[0]),d[1]]
     });
@@ -100,12 +103,11 @@ document.addEventListener('turbolinks:load', function(){
     const matchArray = []   
     //摂取カロリーの配列作成の関数
     function kcalArray(){
-      var fakeData = copyKcalData
-      
+       let i = 0
       for(const label of fullYearArray){
-        if(label == fakeData[0][0]){
-          matchArray.push(fakeData[0][1])
-          fakeData = fakeData.slice(1)
+        if(i < kcalData.length && label == kcalData[i][0]){
+          matchArray.push(kcalData[i][1])
+          i += 1
         }
         else {
           matchArray.push(0)
@@ -113,7 +115,7 @@ document.addEventListener('turbolinks:load', function(){
       }
     }
     //摂取カロリーの配列作成の関数
-
+    
 
     //目標設定をした日付取得｜｜更新した日付があればそれを取得
     if(dataCreated == dataUpdated){
@@ -124,8 +126,7 @@ document.addEventListener('turbolinks:load', function(){
       dataSelect(td)
     }
     else {
-      //const td = new Date(dataUpdated)
-      const td = new Date(2020, 5, 4)
+      const td = new Date(dataUpdated)
       const targetDay = new Date(td.getFullYear()+"-"+(td.getMonth()+1)+"-"+td.getDate())
 
       ArrayNew(targetDay)
@@ -135,7 +136,7 @@ document.addEventListener('turbolinks:load', function(){
 
     //摂取カロリーの配列を作成する関数の呼び出し
     kcalArray()
- 
+      
     function chartView(){
     // myChartの横幅を動的に変更
     const chartWidth = 125

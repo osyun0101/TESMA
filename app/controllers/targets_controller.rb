@@ -1,10 +1,13 @@
 class TargetsController < ApplicationController
-  before_action :user_session, only: [:new,:index]
+  before_action :user_session, only: [:new,:index,:create,:update]
+  before_action :data_calories, only: [:index]
+  before_action :data_target, only: [:index]
 
   def index
     calory = Calory.where(user_id: current_user.id)
     
     @data = create_array(calory)
+    @progress = progress_data(calory)
   end
 
   def new
@@ -67,12 +70,6 @@ class TargetsController < ApplicationController
     params.require(:target).permit(:weight, :date).merge(params.permit(:intensity,:intake)).merge(user_id: current_user.id)
   end
 
-  def user_session
-    unless user_signed_in?
-      redirect_to new_user_session_path
-     end
-  end
-
   def create_array(calory)
     str = ""
     kcal = 0
@@ -89,5 +86,31 @@ class TargetsController < ApplicationController
       end
     end
     return str
+  end
+
+  def progress_data(calory)
+    sum = 0
+    calory.each do |i|
+      sum += i.calory
+    end
+    average = (sum.to_f.rationalize/calory.length.to_f.rationalize).to_f
+    remaining = (current_user.target.date-Date.today).to_i
+    firekl = (current_user.metabolism.to_f.rationalize*current_user.target.intensity.to_f.rationalize).to_f
+    oneday_kl = (firekl.rationalize - average.rationalize).to_f
+    downweight = ((oneday_kl.rationalize*remaining.rationalize)/7000r).to_f
+    progress = (current_user.weight.to_f.rationalize-downweight.rationalize).to_f
+    return progress.round
+  end
+
+  def data_calories
+    if (current_user.calories == [])
+      redirect_to new_calory_path, alert: '＊目標進捗は摂取カロリーが入力されると確認できます'
+    end
+  end
+
+  def data_target
+    if (current_user.target == nil)
+      redirect_to new_target_path, alert: '＊目標進捗は目標設定が設定されると確認できます'
+    end
   end
 end

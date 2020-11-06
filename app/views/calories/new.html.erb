@@ -2,6 +2,9 @@
 
 <div class="header-height content-color">
   <div id="calory-content">
+   <% if flash[:alert]%> 
+   <p class="flash-calory-data-none"><%=flash[:alert]%></p>
+  <% end %>
    <p class="calory-sum">カロリー計算</p>
     <div class="calory-sum-box">
     

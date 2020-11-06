@@ -1,4 +1,6 @@
 class CaloriesController < ApplicationController
+  before_action :user_session, only: [:new,:create]
+
   def index
     
   end

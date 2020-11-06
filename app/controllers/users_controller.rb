@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :user_session, only: [:metabolism]
+  before_action :user_session, only: [:metabolism,:metabolism_update]
 
   def metabolism
    
@@ -18,11 +18,5 @@ class UsersController < ApplicationController
 
   def params_meta
     params.permit(:stature, :weight, :age,:metabolism)
-  end
-
-  def user_session
-    unless user_signed_in?
-      redirect_to new_user_session_path
-     end
   end
 end
