@@ -104,13 +104,13 @@ class TargetsController < ApplicationController
 
   def data_calories
     if (current_user.calories == [])
-      redirect_to new_calory_path, alert: '＊目標進捗は摂取カロリーが入力されると確認できます'
+      redirect_to new_calory_path, alert: '＊目標進捗は摂取カロリーと目標設定が設定されると確認できます'
     end
   end
 
   def data_target
     if (current_user.target == nil)
-      redirect_to new_target_path, alert: '＊目標進捗は目標設定が設定されると確認できます'
+      redirect_to new_target_path, alert: '＊目標進捗は摂取カロリーと目標設定が設定されると確認できます'
     end
   end
 end
