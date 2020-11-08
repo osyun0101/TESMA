@@ -72,7 +72,17 @@ Things you may want to cover:
 カロリー計算をする物や、体重を管理するサービスはありましたが、そういったサービスを利用するユーザーはダイエットがしたい人が多いのではないかと考え、双方をまとめて利用できるサービスがあれば楽に管理することができると思いました。
 
 ## デモ
+* カロリー計算機能
+![demo](https://github.com/osyun0101/TESMA/blob/master/TESMA.wiki/gif/calory.gif)
 
+* 基礎代謝管理機能
+![demo](https://github.com/osyun0101/TESMA/blob/master/TESMA.wiki/gif/metabolism.gif)
+
+* 目標設定機能
+![demo](https://github.com/osyun0101/TESMA/blob/master/TESMA.wiki/gif/target.gif)
+
+* 目標進捗、グラフ管理
+![demo](https://github.com/osyun0101/TESMA/blob/master/TESMA.wiki/gif/progress.gif)
 
 
 # テーブル設計
