@@ -115,7 +115,6 @@ document.addEventListener('turbolinks:load', function(){
       }
     }
     //摂取カロリーの配列作成の関数
-    
 
     //目標設定をした日付取得｜｜更新した日付があればそれを取得
     if(dataCreated == dataUpdated){
