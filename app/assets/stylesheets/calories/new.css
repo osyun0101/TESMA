@@ -3,12 +3,17 @@
   height: 100%;
 }
 
+.calory-vh {
+  position: absolute;
+  top: 170px;
+  width: 100%;
+}
+
 #calory-content {
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 30px;
-  height: 100%;
-  overflow: scroll;
+  min-height: calc(100vh - 301px);
 }
 
 .flash-calory-data-none {
