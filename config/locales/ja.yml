@@ -3,5 +3,9 @@ ja:
    attributes:
      user:
       email: Eメール
+      age: 年齢
+      stature: 身長
+      weight: 体重
+      metabolism: 基礎代謝量
      calory:
       calory: カロリー
