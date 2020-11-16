@@ -10,6 +10,7 @@
     
       <div class="sum-left">
       <%=form_with model: @calory, url: calories_path, local: true do |f|%>
+         <%=render 'shared/error_messages', model: f.object%>
         <p>カロリー計算結果</p>
         <%=f.number_field :calory, id: "math-all"%>
         <div class="calory-button">

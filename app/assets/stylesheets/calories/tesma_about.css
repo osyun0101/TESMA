@@ -1,6 +1,12 @@
+.tesma-about {
+    position: absolute;
+    top: 170px;
+    width: 100%;
+}
+
 .tesma-about-content {
   display: flex;
-  height: 100%;
+  height: calc(100vh - 170px);
 }
 
 .about-lists {
@@ -10,7 +16,6 @@
 }
 
 .lists-fixed {
-  position: fixed;
   width: 270px;
   padding-right: 10px;
   padding-left: 10px;
