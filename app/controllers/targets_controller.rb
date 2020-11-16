@@ -2,6 +2,7 @@ class TargetsController < ApplicationController
   before_action :user_session, only: [:new,:target_index,:create,:update]
   before_action :data_calories, only: [:target_index]
   before_action :data_target, only: [:target_index]
+  before_action :weight_change, only: [:target_index]
 
   def target_index
     calory = Calory.where(user_id: current_user.id)
@@ -111,6 +112,12 @@ class TargetsController < ApplicationController
   def data_target
     if (current_user.target == nil)
       redirect_to new_target_path, alert: '＊目標進捗は摂取カロリーと目標設定が設定されると確認できます'
+    end
+  end
+
+  def weight_change
+    if current_user.weight < current_user.target.weight
+      redirect_to new_target_path, alert: '現状の体重が目標体重を下回ったため、目標設定を変更してください。'
     end
   end
 end
