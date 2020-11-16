@@ -1,9 +1,9 @@
 class TargetsController < ApplicationController
-  before_action :user_session, only: [:new,:index,:create,:update]
-  before_action :data_calories, only: [:index]
-  before_action :data_target, only: [:index]
+  before_action :user_session, only: [:new,:target_index,:create,:update]
+  before_action :data_calories, only: [:target_index]
+  before_action :data_target, only: [:target_index]
 
-  def index
+  def target_index
     calory = Calory.where(user_id: current_user.id)
     
     @data = create_array(calory)

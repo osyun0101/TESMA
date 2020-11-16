@@ -95,8 +95,7 @@ document.addEventListener('turbolinks:load', function(){
   const userMetabo = document.getElementById('user-metabo');
   const metabolism = Number(userMetabo.innerText);
   const uWeight = userMetabo.dataset.weight;
-  
-  
+  const userWeight = document.getElementById('red-font').dataset.weight;
 
   const trueSave = document.getElementById('save-true');
   const notSave = document.getElementById('save-not');
@@ -151,7 +150,8 @@ document.addEventListener('turbolinks:load', function(){
       if (intakeParams != null){
       intakeParams.remove();
       }
-      if (intake > metabolism){
+
+      if (intake > metabolism && weightNum <= userWeight){
         intakeField.innerText=intake
         tWeight.insertAdjacentHTML('afterbegin',`<input type="hidden" name="intake" value=${intake} id="intake-field-num">`)
         trueSave.style.display="block";

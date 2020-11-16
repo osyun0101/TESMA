@@ -9,3 +9,8 @@ ja:
       metabolism: 基礎代謝量
      calory:
       calory: カロリー
+     target:
+      weight: 体重
+      intensity: 生活強度指数
+      intake: 摂取カロリー
+      date: 目標期間

@@ -15,7 +15,7 @@
         </div>
         <div>
           <p class="target-title-bold">目標体重(kg)</p>
-          <p id="red-font">*半角数字で入力してください</p>
+          <p id="red-font" data-weight=<%=current_user.weight%>>*半角数字で入力してください</p>
           <%=f.text_field :weight ,class: "field-center", value: @target.weight%>
         </div>
         <div class="target-span">
@@ -138,7 +138,7 @@
           <p>1日当たり摂取カロリー（上記の情報を元に自動で算出します）</p>
           <p>ーー基礎代謝量より摂取カロリーが少なければ保存することができませんーー</p>
           <p id="save-true">＊保存可能です</p>
-          <p id="save-not">＊保存できません
+          <p id="save-not">＊保存できません</p>
           <br>
           ーー摂取カロリーが下回っています。目標期間を設定し直してください。ーー
           </p>
