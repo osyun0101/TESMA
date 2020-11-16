@@ -1,9 +1,9 @@
 document.addEventListener('turbolinks:load', function(){
-  const age = document.getElementById('user_age');
-  if (age == null){
+  const sex = document.getElementById('user_sex_id');
+  if (sex == null ){
     return null
   }
-  const sex = document.getElementById('user_sex_id');
+  const age = document.getElementById('user_age');
   const stature = document.getElementById('user_stature');
   const weight = document.getElementById('user_weight');
   const metabolism = document.getElementById('user_metabolism');

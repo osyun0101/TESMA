@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
       redirect_to new_user_session_path
      end
   end
+
   private
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name,:phone_number,:age,:stature,:weight,:sex_id,:metabolism])

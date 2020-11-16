@@ -3,6 +3,11 @@
 <div class="header-height">
 
 <div>
+  <% if flash[:notice]%> 
+  <div id="flash-bar">
+  <p><%=flash[:notice]%></p>
+  </div>
+  <% end %>
   <div class="tesma-introduction">
     <h1>理想の体をあなたの手に</h1>
     <h1>宇宙一シンプルに</h1>
