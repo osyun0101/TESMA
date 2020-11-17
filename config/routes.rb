@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "calories#index"
   get 'calories' => "calories#new"
   get 'users/:id' => "users#metabolism"
+  get 'users' => "users#registrations"
   get 'targets' => "targets#new"
   resources :calories, only: [:new,:create] do
     collection do

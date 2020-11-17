@@ -2,11 +2,15 @@ ja:
  activerecord:
    attributes:
      user:
+      name: 名前
+      phone_number: 電話番号
       email: Eメール
       age: 年齢
       stature: 身長
       weight: 体重
       metabolism: 基礎代謝量
+      sex: 性別
+      sex_id: 性別
      calory:
       calory: カロリー
      target:
@@ -14,3 +18,5 @@ ja:
       intensity: 生活強度指数
       intake: 摂取カロリー
       date: 目標期間
+     
+ 

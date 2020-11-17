@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :user_session, only: [:metabolism,:metabolism_update]
 
+  def registrations
+    redirect_to new_user_registration_path
+  end
+
   def metabolism
    @user = User.find(current_user.id)
   end
