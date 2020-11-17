@@ -3,7 +3,7 @@ FactoryBot.define do
     weight {'70'}
     intensity {'1.5'}
     intake {'2000'}
-    date {2020-11-28}
+    date {Date.today+1}
     association :user
   end
 end
