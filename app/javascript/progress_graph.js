@@ -117,20 +117,25 @@ document.addEventListener('turbolinks:load', function(){
     //摂取カロリーの配列作成の関数
 
     //目標設定をした日付取得｜｜更新した日付があればそれを取得
-    if(dataCreated == dataUpdated){
       const td = new Date(dataCreated)
       const targetDay = new Date(td.getFullYear()+"-"+(td.getMonth()+1)+"-"+td.getDate())
 
       ArrayNew(targetDay)
       dataSelect(td)
-    }
-    else {
-      const td = new Date(dataUpdated)
-      const targetDay = new Date(td.getFullYear()+"-"+(td.getMonth()+1)+"-"+td.getDate())
+    //if(dataCreated == dataUpdated){
+     // const td = new Date(dataCreated)
+      //const targetDay = new Date(td.getFullYear()+"-"+(td.getMonth()+1)+"-"+td.getDate())
 
-      ArrayNew(targetDay)
-      dataSelect(td)
-      }
+    //  ArrayNew(targetDay)
+     // dataSelect(td)
+   // }
+    //else {
+      //const td = new Date(dataUpdated)
+     // const targetDay = new Date(td.getFullYear()+"-"+(td.getMonth()+1)+"-"+td.getDate())
+
+      //ArrayNew(targetDay)
+      //dataSelect(td)
+      //}
     //目標設定をした日付取得｜｜更新した日付があればそれを取得
 
     //摂取カロリーの配列を作成する関数の呼び出し
