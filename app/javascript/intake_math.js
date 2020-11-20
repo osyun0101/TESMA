@@ -144,7 +144,7 @@ document.addEventListener('turbolinks:load', function(){
 
     //1日の摂取カロリー計算
     const intake = Math.floor(evalCalculation(`${combustion}-${totalKcal}`));
-
+    
 
       const intakeParams = document.getElementById('intake-field-num');
       if (intakeParams != null){

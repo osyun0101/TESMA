@@ -12,6 +12,11 @@ class UsersController < ApplicationController
   def update
     @user = User.find(current_user.id)
     if @user.update(params_meta)
+      if @user.target != nil
+        target = Target.find(@user.target.id)
+        target.intake = @user.intake_save
+        target.save
+      end
       redirect_to action: :metabolism
       flash[:notice] = "保存しました"
     else

@@ -22,4 +22,14 @@ class User < ApplicationRecord
   validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字の両方を含めて設定してください', on: :create
 
   validates :sex_id, numericality: { other_than: 1, message: 'を選択してください'}
+
+  def intake_save
+    weight = (self.weight.to_f.rationalize - self.target.weight.to_f.rationalize).to_f
+    date = self.target.date - Date.today
+    kcal = weight.rationalize*7000r/(date+1)
+    combustion = self.metabolism.to_f.rationalize * self.target.intensity.to_f.rationalize
+    intake = ((combustion - kcal).to_f).floor
+    binding.pry
+    return intake
+  end
 end
