@@ -119,9 +119,8 @@ document.addEventListener('turbolinks:load', function(){
   }
   if (weightNum > 0 && spanNum != 0 && intensityNum != 0){
     intakeMath()
-    const saveIntake = document.getElementById('target-intake-data').dataset.intake;
-    tWeight.insertAdjacentHTML('afterbegin', `<input type="hidden" id="intake-field-num" name="intake" value=${saveIntake}>`)
   }
+
 
   function intakeMath(){
     if (weightNum > 0 && spanNum != 0 && intensityNum != 0){
