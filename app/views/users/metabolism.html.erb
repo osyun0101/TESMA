@@ -6,7 +6,7 @@
   <p><%=flash[:notice]%></p>
   </div>
   <% end %>
- <div class="metabo-content">
+ <div class="metabo-content" id="metabo-button">
    <p class="metabo-title">基礎代謝管理</p>
   <%=form_with model: @user,class: "metabo-form",url: user_path(@user), local: true do |f|%>
     <%= render 'shared/error_messages', model: f.object%>

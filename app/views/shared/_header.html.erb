@@ -19,19 +19,19 @@
     <div class="select-block">
       <ul class="select-list">
         <%= link_to  new_calory_path do%>
-        <li>カロリー計算</li>
+        <li id="h_kcal">カロリー計算</li>
         <%end%>
         <%= link_to  metabolism_users_path do%>
-        <li>基礎代謝管理</li>
+        <li id="h_metabo">基礎代謝管理</li>
         <%end%>
         <%= link_to  new_target_path do%>
-        <li>目標設定</li>
+        <li id="h_target">目標設定</li>
         <%end%>
         <%= link_to  target_index_targets_path do%>
-        <li>目標進捗</li>
+        <li id="h_index">目標進捗</li>
         <%end%>
-        <%= link_to (tesma_about_calories_path) do%>
-        <li>TESMAについて</li>
+        <%= link_to tesma_about_calories_path do%>
+        <li id="h_about">TESMAについて</li>
         <%end%>
       </ul>
     </div>

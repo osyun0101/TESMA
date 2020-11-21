@@ -18,6 +18,7 @@ require("../metabolism_update")
 require("../intensity_click")
 require("../intake_math")
 require("../progress_graph")
+require("../header_button")
 
 
 
