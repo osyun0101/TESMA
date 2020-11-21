@@ -29,7 +29,6 @@ class User < ApplicationRecord
     kcal = weight.rationalize*7000r/(date+1)
     combustion = self.metabolism.to_f.rationalize * self.target.intensity.to_f.rationalize
     intake = ((combustion - kcal).to_f).floor
-    binding.pry
     return intake
   end
 end
