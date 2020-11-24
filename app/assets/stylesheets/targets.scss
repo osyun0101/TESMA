@@ -218,6 +218,11 @@
   height: auto;
 }
 
+.target_index_height {
+  min-height: calc(100vh - 301px);
+  padding: 0 50px;
+}
+
 .target-index-content {
   display: flex;
   justify-content: space-between;
