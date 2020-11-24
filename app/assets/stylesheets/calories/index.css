@@ -1,3 +1,7 @@
+.top-content-height {
+  min-height: calc(100vh - 301px);
+}
+
 .tesma-introduction {
   position: relative;
   height: 500px;
