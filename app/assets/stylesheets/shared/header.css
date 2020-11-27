@@ -89,6 +89,25 @@
 }
 
 @media (max-width: 375px){
+  #header-content {
+    padding: 5px 2px 0 2px;
+  }
+  .header-box {
+    margin-bottom: 3px;
+  }
+  .header-logo {
+    padding: 0;
+    
+    }
+  .tesma_logo_icon {
+    width: 100px;
+    height: 20px;
+  }
+
+  .session-user a{
+    line-height: 16px;
+    font-size: 12px;
+  }
   
   .select-list li{
     width: 18vw;
