@@ -145,4 +145,13 @@
   .point-image-box p{
     font-size: 10px;
   }
+
+  .concept-link {
+    margin: 0 0 5px 0;
+    padding: 0 5px;
+  }
+
+  .concept-link p{
+    font-size: 15px;
+  }
 }

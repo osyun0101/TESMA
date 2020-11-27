@@ -10,3 +10,9 @@
 .footer-logo a{
   font-size: 0;
 }
+
+@media (max-width: 375px){
+  #footer-content {
+    padding: 10px 0;
+  }
+}
