@@ -111,3 +111,38 @@
 .red-important {
   background-color: #ffdbc9;
 }
+
+@media (max-width: 375px){
+  .tesma-introduction {
+    height: 200px;
+  }
+
+  .tesma-introduction h1{
+    font-size: 20px;
+  }
+  .tesma-main-purpose {
+    font-size: 20px;
+  }
+
+  .point-logo {
+    width: 90px;
+    height: 30px;
+    margin: 0;
+  }
+
+  .point-image-box {
+    display: flex;
+    align-items: center;
+  }
+
+  .point-logos {
+  width: 45%;
+  height: 100px;
+  object-fit: contain;
+  margin-right: 5px;
+  }
+
+  .point-image-box p{
+    font-size: 10px;
+  }
+}

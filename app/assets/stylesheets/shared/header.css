@@ -89,6 +89,7 @@
 }
 
 @media (max-width: 375px){
+  /*header------------------------------------*/
   #header-content {
     padding: 5px 2px 0 2px;
   }
@@ -119,4 +120,9 @@
   #h_about {
     width: 23vw;
   }
+   /*header------------------------------------*/
+
+   .header-height {
+     top: 74px;
+   }
 }
