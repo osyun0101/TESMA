@@ -348,6 +348,7 @@
 
   #calory-content {
     padding: 10px;
+    min-height: calc(100vh - 120px);
   }
 
   .calory-sum {
@@ -368,5 +369,15 @@
 
   #reset-button {
     width: 50%;
+  }
+
+  .select-food p{
+    font-size: 10px;
+  }
+
+  .material li{
+    width: 80px;
+    height: 40px;
+    font-size: 10px;
   }
 }
