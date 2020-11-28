@@ -340,3 +340,33 @@
 .material li:hover {
   background-color: #FFC7AF;
 }
+
+@media (max-width: 375px){
+  .calory-vh {
+    top: 74px;
+  }
+
+  #calory-content {
+    padding: 10px;
+  }
+
+  .calory-sum {
+    font-size: 15px;
+  }
+
+  .calory-sum-box {
+    padding-top: 10px;
+  }
+
+  .sum-left {
+    font-size: 10px;
+  }
+
+  #math-data {
+    width: 50%;
+  }
+
+  #reset-button {
+    width: 50%;
+  }
+}
