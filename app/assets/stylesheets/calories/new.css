@@ -361,6 +361,7 @@
 
   .sum-left {
     font-size: 10px;
+    margin-right: 10px;
   }
 
   #math-data {
@@ -379,5 +380,23 @@
     width: 80px;
     height: 40px;
     font-size: 10px;
+  }
+
+  .click-button-select {
+    font-size: 10px;
+  }
+
+  .small-p {
+    font-size: 8px;
+  }
+
+  #japan-meat {
+    width: 50px;
+    font-size: 12px;
+  }
+
+  #overseas-meat {
+    width: 50px;
+    font-size: 12px;
   }
 }
