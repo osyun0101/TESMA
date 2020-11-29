@@ -421,4 +421,22 @@
   .menu-name {
     width: 20px
   }
+
+  .hidden-field {
+    padding: 5px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    font-size: 10px;
+  }
+
+  .hidden-field li{
+    margin-right: 3px;
+    width: 50px;
+    font-size: 10px;
+  }
+
+  .wrap-hidden1 {
+    display: flex;
+    visibility: hidden;
+  }
 }
