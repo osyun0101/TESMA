@@ -439,4 +439,9 @@
     display: flex;
     visibility: hidden;
   }
+
+  #meat-submit {
+    width: 40px;
+    font-size: 12px;
+  }
 }
