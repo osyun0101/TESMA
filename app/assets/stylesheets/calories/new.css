@@ -399,4 +399,26 @@
     width: 50px;
     font-size: 12px;
   }
+
+  .food-title {
+    font-size: 12px;
+    margin: 3px 2px;
+  }
+
+  .food-flex {
+    padding: 5px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    font-size: 10px;
+  }
+
+  .food-flex li{
+    margin-right: 3px;
+    width: 50px;
+    font-size: 10px;
+  }
+
+  .menu-name {
+    width: 20px
+  }
 }
