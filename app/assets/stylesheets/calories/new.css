@@ -365,11 +365,11 @@
   }
 
   #math-data {
-    width: 50%;
+    width: 45%;
   }
 
   #reset-button {
-    width: 50%;
+    width: 45%;
   }
 
   .select-food p{
@@ -382,12 +382,17 @@
     font-size: 10px;
   }
 
+  #menu-data {
+    padding: 5px;
+  }
+
   .click-button-select {
     font-size: 10px;
   }
 
   .small-p {
     font-size: 8px;
+    margin: 3px 0;
   }
 
   #japan-meat {
