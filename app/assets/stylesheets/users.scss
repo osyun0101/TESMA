@@ -147,3 +147,22 @@
   margin-bottom: 50px;
 }
 
+@media (max-width: 375px){
+  .metabo-content {
+    min-height: calc(100vh - 120px);
+    padding: 10px 20px 0 20px;
+
+  }
+
+  .metabo-title {
+    font-size: 20px;
+  }
+
+  #metabo-update-about {
+    display: none;
+  }
+
+  .this-view::after {
+    content: "身長、体重、年齢に変化があれば、下記に入力することで基礎代謝量が更新されます";
+  }
+}
