@@ -212,6 +212,12 @@
 }
 
 @media (max-width: 375px){
+  .target-title-box::after {
+    content: "基礎代謝量より食事による摂取カロリーが下回る目標の場合は設定できません。";
+    display: block;
+    text-align: center;
+  }
+
   .target-life-content {
     top: 74px;
   }
@@ -222,6 +228,10 @@
 
   #target-num {
     font-size: 20px;
+  }
+
+  .waring-target {
+    display: none;
   }
 }
 

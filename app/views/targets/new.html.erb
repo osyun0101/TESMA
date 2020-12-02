@@ -5,9 +5,9 @@
       <% if flash[:alert]%> 
       <p class="flash-calory-data-none"><%=flash[:alert]%></p>
       <% end %>
-      <div>
+      <div class="target-title-box">
       <p id="target-num">目標設定</p>
-      <p>ーー基礎代謝量より食事による摂取カロリーが下回る目標の場合は設定できません。ーー</p>
+      <p class="waring-target">ーー基礎代謝量より食事による摂取カロリーが下回る目標の場合は設定できません。ーー</p>
       </div>
       <%=form_with model: @target, class: "target-form",local: true do |f|%>
         <div class="errors-color-red">
