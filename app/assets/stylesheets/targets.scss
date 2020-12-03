@@ -218,6 +218,14 @@
     text-align: center;
   }
 
+  .target-form {
+    margin-top: 10px;
+  }
+
+  .target-span {
+    margin: 10px 0;
+  }
+
   .target-life-content {
     top: 74px;
   }
@@ -232,6 +240,33 @@
 
   .waring-target {
     display: none;
+  }
+
+  .media-intensity-waring {
+    margin-top: 10px;
+  }
+
+  .media-intensity-waring::before {
+    content: "＊「日常生活の内容」「生活動作」「生活動作時間」";
+    font-weight: bold;
+  }
+
+  .media-intensity-waring::after {
+    content: "を確認し、自身に該当するものを選択してください";
+
+  }
+
+  #intensity-waring {
+    display: none;
+  }
+
+  .select-intensity {
+    flex-wrap: wrap;
+  }
+
+  .select-life-num {
+    width: 49%;
+    margin-bottom: 10px;
   }
 }
 
