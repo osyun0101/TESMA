@@ -384,4 +384,34 @@
   display: none;
 }
 
+@media (max-width: 375px) {
+  .target_index_height {
+    padding: 0 10px;
+  }
 
+  .target-index-content {
+    padding-top: 10px;
+  }
+
+  #index-title {
+    font-size: 20px;
+  }
+
+  .target-view {
+    font-size: 14px;
+  }
+
+  .user-index {
+    padding-top: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .user-index li{
+    margin-right: 0;
+  }
+
+  .user-index div{
+    width: 49%;
+  }
+}
