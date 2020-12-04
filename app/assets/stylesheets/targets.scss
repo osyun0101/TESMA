@@ -284,7 +284,16 @@
   .case-by-save {
     display: none;
   }
+
+  .not-save-span {
+    display: none;
+  }
   
+  .media-save-span::after {
+    content: "摂取カロリーが下回っています。目標期間を設定し直してください。";
+    color: red;
+    font-size: 14px;
+  }
 }
 
 /*-------------------------------------index--------------------------------------*/
