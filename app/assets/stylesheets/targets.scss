@@ -385,6 +385,7 @@
 }
 
 @media (max-width: 375px) {
+
   .target_index_height {
     padding: 0 10px;
   }
@@ -413,5 +414,18 @@
 
   .user-index div{
     width: 49%;
+  }
+
+  .progress-chart-container {
+    margin-top: 30px;
+  }
+
+  .progress-title {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+
+  #chart-box {
+    padding: 0 10px; 
   }
 }
