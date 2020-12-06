@@ -143,7 +143,25 @@ document.addEventListener('turbolinks:load', function(){
       
     function chartView(){
     // myChartの横幅を動的に変更
-    const chartWidth = 125
+    if (window.innerWidth <= 375){
+      const chartWidth = 50
+      if(array.length == 1){
+        ctx.style.width = chartWidth + "px"
+        ctx.style.height = 400+"px"
+      } 
+      else if(array.length > 1 && count > 1){
+        const width = chartWidth+(array.length - 1)*30 + (count*3)
+        ctx.style.width = width + "px"
+        ctx.style.height = 400+"px"
+      }
+      else {
+        const width = chartWidth+(array.length - 1)*30 + 3
+        ctx.style.width = width + "px"
+        ctx.style.height = 400+"px"
+      } 
+    }
+    else {
+      const chartWidth = 125
       if(array.length == 1){
         ctx.style.width = chartWidth + "px"
         ctx.style.height = 600+"px"
@@ -158,7 +176,7 @@ document.addEventListener('turbolinks:load', function(){
         ctx.style.width = width + "px"
         ctx.style.height = 600+"px"
       } 
-    
+    }
     // myChartの横幅を動的に変更
     
 
