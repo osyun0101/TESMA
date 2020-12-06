@@ -144,6 +144,7 @@ document.addEventListener('turbolinks:load', function(){
     function chartView(){
     // myChartの横幅を動的に変更
     if (window.innerWidth <= 375){
+      //表示領域の横幅が375px以下の時のグラフサイズ調整
       const chartWidth = 50
       if(array.length == 1){
         ctx.style.width = chartWidth + "px"
@@ -290,50 +291,98 @@ document.addEventListener('turbolinks:load', function(){
      const newCanvas = document.createElement("canvas"); 
      newCanvas.id = "addChart";
 
-
-     const adChart = new Chart(newCanvas, {
-      type: 'line',
-      data: {
-      labels: changeArray,
-      datasets: [
-        {
-          data: MonthIntake,
-          borderColor: "rgba(255,0,0,1)",
-          backgroundColor: "rgba(0,0,0,0)",
-          lineTension:0,
-        },
-        {
-          data: ar,
-          borderColor: "rgba(0,0,255,1)",
-          backgroundColor: "rgba(0,0,0,0)",
-          lineTension:0,
-          pointRadius: 5,
-        }
-      ],
-    },
-    options: {
-      responsive: true,
-      animation: false,
-      legend: {
-        display: false,
-      },
-      scales: {
-        yAxes: [{
-          ticks: {
-            autoSkip: false,
-            suggestedMax: intake,
-            suggestedMin: 0,
-            stepSize: 200,
-            minRotation: 0,
-            maxRotation: 0,
-            callback: function(value, index, values){
-              return  value +  'kcal'
-            }
+     if (window.innerWidth <= 414){
+       newCanvas.height=400;
+       newCanvas.width=600;
+      const adChart = new Chart(newCanvas, {
+        type: 'line',
+        data: {
+        labels: changeArray,
+        datasets: [
+          {
+            data: MonthIntake,
+            borderColor: "rgba(255,0,0,1)",
+            backgroundColor: "rgba(0,0,0,0)",
+            lineTension:0,
+          },
+          {
+            data: ar,
+            borderColor: "rgba(0,0,255,1)",
+            backgroundColor: "rgba(0,0,0,0)",
+            lineTension:0,
+            pointRadius: 5,
           }
-        }]
+        ],
       },
-    }
-  });
+      options: {
+        responsive: false,
+        animation: false,
+        legend: {
+          display: false,
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              autoSkip: false,
+              suggestedMax: intake,
+              suggestedMin: 0,
+              stepSize: 200,
+              minRotation: 0,
+              maxRotation: 0,
+              callback: function(value, index, values){
+                return  value +  'kcal'
+              }
+            }
+          }]
+        },
+      }
+    });
+   }
+     else {
+      const adChart = new Chart(newCanvas, {
+        type: 'line',
+        data: {
+        labels: changeArray,
+        datasets: [
+          {
+            data: MonthIntake,
+            borderColor: "rgba(255,0,0,1)",
+            backgroundColor: "rgba(0,0,0,0)",
+            lineTension:0,
+          },
+          {
+            data: ar,
+            borderColor: "rgba(0,0,255,1)",
+            backgroundColor: "rgba(0,0,0,0)",
+            lineTension:0,
+            pointRadius: 5,
+          }
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: false,
+        legend: {
+          display: false,
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              autoSkip: false,
+              suggestedMax: intake,
+              suggestedMin: 0,
+              stepSize: 200,
+              minRotation: 0,
+              maxRotation: 0,
+              callback: function(value, index, values){
+                return  value +  'kcal'
+              }
+            }
+          }]
+        },
+      }
+    });
+  }
   
   const chartBox = document.getElementById('chart-box');
   const alreadyAdd = document.getElementById('addChart');
