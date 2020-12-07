@@ -149,3 +149,31 @@
   object-fit: contain;
 }
 
+@media (max-width: 414px){
+  .tesma-about{
+    top: 74px;
+  }
+
+  .tesma-about-content {
+    display: block;
+  }
+  
+  .about-lists {
+    border: none;
+    width: 100%;
+  }
+
+  .lists-fixed {
+    width: auto;
+  }
+
+  .about-lists-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about-lists-box li{
+    margin-top: 10px;
+    font-size: 11px;
+  }
+}
