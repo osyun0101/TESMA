@@ -167,13 +167,11 @@
     width: auto;
   }
 
-  .about-lists-box {
-    display: flex;
-    justify-content: space-between;
-  }
-
   .about-lists-box li{
+    padding: 10px 5px;
     margin-top: 10px;
     font-size: 11px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
   }
 }
