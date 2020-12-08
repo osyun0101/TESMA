@@ -136,6 +136,10 @@
   border-left: 15px solid transparent;
 }
 
+.media-414 {
+  display: none;
+}
+
 /*---------------------------基礎代謝をあげるとどうなるか*/
 
 
@@ -148,6 +152,8 @@
   height: 500px;
   object-fit: contain;
 }
+
+/*---------------------------media query -----------*/
 
 @media (max-width: 414px){
   .tesma-about{
@@ -173,5 +179,84 @@
     font-size: 11px;
     text-align: left;
     border-bottom: 1px solid #ccc;
+  }
+
+  .selected-list {
+    width: auto;
+  }
+
+  .tesma-concept-p {
+    font-size: 14px;
+  }
+
+  .personnel-lists li{
+    font-size: 16px;
+  }
+
+  #tesma-concept span {
+    font-size: 14px;
+  }
+  
+  .last-logic-str {
+    font-size: 20px;
+  }
+
+  .main-logic-str {
+    display: none;
+  }
+
+  .media-414 {
+    display: block;
+    font-size: 12px;
+  }
+
+  #basal-none-media {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 1px;
+    z-index: 9999;
+    font-weight: 500;
+    width: 300px;
+    background-color: #ffdbc9;
+    padding: 5px;
+    color: black;
+    font-weight: 600;
+  }
+  
+  #basal-none-media:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -15px;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #ffdbc9;
+    border-left: 15px solid transparent;
+  }
+  
+  #life-num-none-media {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 1px;
+    z-index: 9999;
+    font-weight: 500;
+    width: 500px;
+    background-color: #ffdbc9;
+    padding: 5px;
+    color: black;
+    font-weight: 600;
+  }
+  
+  #life-num-none-media:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -15px;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #ffdbc9;
+    border-left: 15px solid transparent;
   }
 }
