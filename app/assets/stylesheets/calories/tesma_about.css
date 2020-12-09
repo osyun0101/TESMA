@@ -162,6 +162,7 @@
 
   .tesma-about-content {
     display: block;
+    min-height: calc(100vh - 120px);
   }
   
   .about-lists {
@@ -258,5 +259,16 @@
     border-right: 15px solid transparent;
     border-bottom: 15px solid #ffdbc9;
     border-left: 15px solid transparent;
+  }
+
+  .main-logic-image {
+    max-width: 320px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .basal-logo-image {
+    max-width: 320px;
+    height: auto;
   }
 }
