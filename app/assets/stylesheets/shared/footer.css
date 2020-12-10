@@ -11,7 +11,7 @@
   font-size: 0;
 }
 
-@media (max-width: 375px){
+@media (max-width: 414px){
   #footer-content {
     padding: 10px 0;
   }

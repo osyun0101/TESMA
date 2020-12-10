@@ -211,7 +211,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 375px){
+@media (max-width: 414px){
   .target-title-box::after {
     content: "基礎代謝量より食事による摂取カロリーが下回る目標の場合は設定できません。";
     display: block;
@@ -384,7 +384,7 @@
   display: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
 
   .target_index_height {
     padding: 0 10px;

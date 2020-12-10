@@ -112,7 +112,7 @@
   background-color: #ffdbc9;
 }
 
-@media (max-width: 375px){
+@media (max-width: 414px){
   .tesma-introduction {
     height: 200px;
   }
