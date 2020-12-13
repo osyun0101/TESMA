@@ -218,7 +218,7 @@
     left: 1px;
     z-index: 9999;
     font-weight: 500;
-    width: 300px;
+    width: calc(100vw - 200px);
     background-color: #ffdbc9;
     padding: 5px;
     color: black;
@@ -241,13 +241,14 @@
     position: absolute;
     top: 30px;
     left: 1px;
+    width: calc(100vw - 200px);
     z-index: 9999;
     font-weight: 500;
-    width: 500px;
     background-color: #ffdbc9;
     padding: 5px;
     color: black;
     font-weight: 600;
+    text-align: left;
   }
   
   #life-num-none-media:before {
