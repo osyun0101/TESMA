@@ -157,12 +157,12 @@
 
 @media (max-width: 414px){
   .tesma-about{
-    top: 74px;
+    top: 76px;
   }
 
   .tesma-about-content {
     display: block;
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 122px);
   }
   
   .about-lists {
