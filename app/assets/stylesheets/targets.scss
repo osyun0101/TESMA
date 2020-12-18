@@ -256,8 +256,8 @@
   }
 
   .media-intensity-waring::after {
-    content: "を確認し、自身に該当するものを選択してください";
-
+    content: "を確認し、自身に該当するものを選択してください。";
+    font-size: 14px;
   }
 
   #intensity-waring {
